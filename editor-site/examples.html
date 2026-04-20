@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Examples — Ian Nytes, Developmental Editor</title>
+  <meta name="description" content="Before and after writing samples, annotated feedback examples, and testimonials." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="examples.html" />
+  <meta property="og:title" content="Examples — Ian Nytes, Developmental Editor" />
+  <meta property="og:description" content="Before and after writing samples, annotated feedback examples, and testimonials." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Examples — Ian Nytes, Developmental Editor" />
+  <meta name="twitter:description" content="Before and after writing samples, annotated feedback examples, and testimonials." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .annotation-wrap {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+    .annotation-header {
+      background: var(--brown);
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .annotation-header span {
+      color: var(--cream);
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+    .annotation-body {
+      padding: 2rem;
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      line-height: 1.85;
+      color: var(--text);
+    }
+    .inline-comment {
+      background: rgba(215,122,97,0.12);
+      border-bottom: 2px solid var(--terracotta);
+      cursor: help;
+      position: relative;
+    }
+    .comment-bubble {
+      display: none;
+      position: absolute;
+      bottom: calc(100% + 8px);
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--brown);
+      color: var(--cream);
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      line-height: 1.5;
+      padding: 0.75rem 1rem;
+      border-radius: var(--radius-sm);
+      width: 260px;
+      z-index: 10;
+      box-shadow: var(--shadow-md);
+      font-style: normal;
+      margin-top: 1.5rem;
+    }
+    .comment-bubble::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 6px solid transparent;
+      border-top-color: var(--brown);
+    }
+    .inline-comment:hover .comment-bubble { display: block; }
+    .comment-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="hero__eyebrow">Examples</span>
+      <h1>Seeing the work in action</h1>
+      <p>Real feedback looks messy before it looks useful. 
+         Here's what the editorial process produces — from annotated drafts to before/after comparisons.</p>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       BEFORE / AFTER
+  ══════════════════════════════════════ -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="fade-up text-center" style="margin-bottom:3rem">
+        <h2>Before & After</h2>
+        <div class="divider divider--center"></div>
+        <p class="muted" style="max-width:540px; margin:0 auto">
+          The same scenes, before and after developmental revision. 
+          Notice how the changes go deeper than prose — they reshape 
+          what the scene is doing and how.
+        </p>
+      </div>
+
+      <!-- Example 1 -->
+      <div class="fade-up" style="margin-bottom:3rem">
+        <div style="
+          display:flex; align-items:center; gap:0.75rem;
+          margin-bottom:1.25rem;
+        ">
+          <span style="
+            background:var(--terracotta); color:var(--white);
+            font-size:0.75rem; font-weight:700; letter-spacing:0.08em;
+            text-transform:uppercase; padding:0.25rem 0.75rem;
+            border-radius:20px;
+          ">Example 1</span>
+          <h3 style="font-size:1.1rem; font-weight:600; color:var(--text-muted)">
+            Opening scene — establishing tension
+          </h3>
+        </div>
+
+        <div class="before-after">
+          <div class="before-after__panel before-after__panel--before">
+            <div class="before-after__label before-after__label--before">
+              ✕ First Draft
+            </div>
+            <div class="before-after__text">
+             The flames flickered in a way that was almost beautiful in their destruction. Hugo turned to Maya beside him, the reds, yellows, and oranges reflecting off her bright green eyes, contrasted by her darker skin. She stared back at him, the fire outlining his slender frame against the night, his black hair shining in the flames. Both of them were too shocked to say anything even while the fire nearly licked them. Almost unconsciously, Maya took Hugo’s hand in her own. The building they stood before had been filled with enough grain to feed everyone they knew for a month, maybe even feed the whole city of Venii for a day. And now it was gone. Hugo ignored a burning oat as it floated down, singeing his shirt. Maya brushed it off him, the stoic look on her face hiding the deep well of dread in her heart. Hugo could tell.
+<br><br>“A powerful omen.” Hugo whispered into the flames.
+
+            </div>
+            <div class="annotated-comment">
+              <strong>Editorial note:</strong> Break up the mention of the fire. You have, flames x2 and fire. Fire contains 3 parts. Fire itself, heat, and smoke. Mention each once, if you want it to convey the desolation of the scene without becoming too "We get it, there's fire." <br> <br>Focus is a little too geared towards scene and not character. You have an opportunity to really capitalize on the realtionship as these characters witness something devestating, emphasize that. <br><br>Also, "powerful omen" implies foreshadowing of something bad happening in the future, but it looks as though something has already occured.
+              
+            </div>
+          </div>
+
+          <div class="before-after__panel before-after__panel--after">
+            <div class="before-after__label before-after__label--after">
+              ✓ Revised Draft
+            </div>
+            <div class="before-after__text">
+              The color of the fire was almost beautiful. Its destructive yellows, reds, and oranges reflected in Maya’s bright green eyes, stark against her dark skin. Both of them were too shocked to speak as the heat pressed against them. Almost unconsciously, Maya took Hugo’s hand in her own.
+
+<br> <br>“A dire circumstance,” Hugo whispered into the smoke. The building that had stood before them, now a memory, had contained enough grain to feed nearly the whole city. A burned oat wafted down, falling like a feather onto Hugo’s shirt. As Maya brushed it from him, her face strained to hide a well of dread.
+            </div>
+            <div class="annotated-comment">
+              <strong>What changed:</strong> Mara's reluctance is shown through behavior 
+              (making coffee first, watching the street) rather than stated. 
+              The file's label shows she already knows the case. 
+              Tension comes from what she's avoiding, not what we're told she feels.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Example 2 -->
+      <div class="fade-up" style="margin-bottom:3rem">
+        <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:1.25rem">
+          <span style="
+            background:var(--terracotta); color:var(--white);
+            font-size:0.75rem; font-weight:700; letter-spacing:0.08em;
+            text-transform:uppercase; padding:0.25rem 0.75rem;
+            border-radius:20px;
+          ">Example 2</span>
+          <h3 style="font-size:1.1rem; font-weight:600; color:var(--text-muted)">
+            Chapter ending — pacing and momentum
+          </h3>
+        </div>
+
+        <div class="before-after">
+          <div class="before-after__panel before-after__panel--before">
+            <div class="before-after__label before-after__label--before">
+              ✕ First Draft
+            </div>
+            <div class="before-after__text">
+              They talked for a long time. Dasan explained everything that had happened 
+              since the summer, and Noor listened. It was a lot to take in. 
+              When he was done, Noor didn't know what to say. 
+              She told him she needed time to think. 
+              He said he understood. They said goodbye and she went home.
+            </div>
+            <div class="annotated-comment">
+              <strong>Editorial note:</strong> The chapter ends on passivity and summary. 
+              We lose what should be an emotionally charged moment — 
+              and miss the opportunity for a chapter-ending hook.
+            </div>
+          </div>
+
+          <div class="before-after__panel before-after__panel--after">
+            <div class="before-after__label before-after__label--after">
+              ✓ Revised Draft
+            </div>
+            <div class="before-after__text">
+              When he finished, the apartment was very quiet.<br><br>
+              "I need a few days," Noor said finally.<br><br>
+              "I know." Dasan looked at the floor. 
+              "I just — I needed you to know first. Before anyone else."<br><br>
+              She didn't answer that. She picked up her bag and left, 
+              and it wasn't until she was outside, halfway down the block, 
+              that she realized she'd forgotten to say goodbye.
+            </div>
+            <div class="annotated-comment">
+              <strong>What changed:</strong> Dialogue and physical action replace summary. 
+              Noor's emotional state is embedded in a specific detail 
+              (forgetting to say goodbye) rather than described. 
+              The chapter ends on an image that carries forward into the next.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       ANNOTATED FEEDBACK EXAMPLE
+  ══════════════════════════════════════ -->
+  <section class="section">
+    <div class="container" style="max-width:820px">
+      <div class="fade-up text-center" style="margin-bottom:3rem">
+        <h2>Annotated Feedback</h2>
+        <div class="divider divider--center"></div>
+        <p class="muted" style="max-width:540px; margin:0 auto">
+          This is what inline editorial comments look like in practice. 
+          Hover over the highlighted text to see the associated note.
+        </p>
+      </div>
+
+      <div class="annotation-wrap fade-up">
+        <div class="annotation-header">
+          <span>📄 Manuscript excerpt — Chapter 3, p. 22</span>
+          <span style="color:rgba(255,248,240,0.5)">Hover highlights for comments</span>
+        </div>
+        <div class="annotation-body">
+          <p style="margin-bottom:1.25rem">
+            <span class="inline-comment">
+              The village had existed for three hundred years, and in that time 
+              it had seen wars, floods, famines, and one particularly bad winter 
+              that the old-timers still talked about.
+              <span class="comment-bubble" style="top:calc(100% + 8px); bottom:auto; margin-top:0;">
+                <span class="comment-label">Pacing</span>
+                This sentence is doing setup work but at the wrong moment — 
+                we've just arrived with the protagonist. 
+                Consider weaving this context in later, after we're grounded in scene.
+              </span>
+            </span>
+          </p>
+
+          <p style="margin-bottom:1.25rem">
+            Sera arrived just before noon. 
+            <span class="inline-comment">
+              She noticed immediately that something was wrong, 
+              though she couldn't say what.
+              <span class="comment-bubble">
+                <span class="comment-label">Show vs. Tell</span>
+                What does she actually observe? Give us the specific detail 
+                that triggers her unease — a sound, a smell, an absence. 
+                Readers trust sensory detail far more than told intuition.
+              </span>
+            </span>
+            The square was empty. A cart sat abandoned near the well.
+          </p>
+
+          <p style="margin-bottom:1.25rem">
+            <span class="inline-comment">
+              She thought of her brother. She thought of what he would do.
+              <span class="comment-bubble">
+                <span class="comment-label">Character Arc</span>
+                This is the third time in two chapters Sera defers to her brother 
+                as a mental reference point. Is this intentional characterization 
+                (she's uncertain, looks to him for guidance) or inadvertent? 
+                If intentional, let's see it pay off — this pattern should build to something.
+              </span>
+            </span>
+            She crossed the square toward the inn.
+          </p>
+
+          <p>
+            The door was unlocked. 
+            <span class="inline-comment">
+              She pushed it open and stepped inside, 
+              into the dark and the smell of old smoke and something worse.
+              <span class="comment-bubble">
+                <span class="comment-label">Strong moment ✓</span>
+                This lands well — "something worse" does exactly the right amount of work. 
+                It creates dread without over-explaining. Keep this.
+              </span>
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+<!--
+
+   ══════════════════════════════════════
+       TESTIMONIALS
+  ══════════════════════════════════════ -->
+  <!--<section class="section section--alt">
+    <div class="container">
+      <div class="fade-up text-center" style="margin-bottom:3rem">
+        <h2>What Writers Say</h2>
+        <div class="divider divider--center"></div>
+      </div>
+
+      <div class="grid-3">
+        <div class="testimonial fade-up">
+          <div style="display:flex; flex-direction:column; height:100%; justify-content:space-between;">
+            <p style="margin-bottom:1.7rem;">
+              [Placeholder — Add a real testimonial here. Ask a writing group member 
+              or past critique partner to describe what they found most useful about your feedback.]
+            </p>
+            <div class="testimonial__author" style="display:flex; align-items:center; justify-content:space-between; margin-top:auto;">
+              <div>
+                <strong>Name, Title/Genre</strong><br>
+                <span style="font-size:0.97em;">"Brief context, e.g. 'After full manuscript critique'"</span>
+              </div>
+              <div class="testimonial__portrait" style="width:48px; height:48px; border-radius:50%; background:#e0e0e0; margin-left:1.1rem; display:flex; align-items:center; justify-content:center; font-size:1.7rem; color:#b0a080; box-shadow:0 2px 8px 0 rgba(0,0,0,0.07);">
+                <span style="opacity:0.5;">IMG</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial fade-up" style="transition-delay:0.1s">
+          <div style="display:flex; flex-direction:column; height:100%; justify-content:space-between;">
+            <p style="margin-bottom:1.7rem;">
+              [Placeholder — Another testimonial focused on a specific outcome: 
+              how the feedback helped them understand a structural problem they couldn't see.]
+            </p>
+            <div class="testimonial__author" style="display:flex; align-items:center; justify-content:space-between; margin-top:auto;">
+              <div>
+                <strong>Name, Title/Genre</strong><br>
+                <span style="font-size:0.97em;">"Brief context"</span>
+              </div>
+              <div class="testimonial__portrait" style="width:48px; height:48px; border-radius:50%; background:#e0e0e0; margin-left:1.1rem; display:flex; align-items:center; justify-content:center; font-size:1.7rem; color:#b0a080; box-shadow:0 2px 8px 0 rgba(0,0,0,0.07);">
+                <span style="opacity:0.5;">IMG</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial fade-up" style="transition-delay:0.2s">
+          <div style="display:flex; flex-direction:column; height:100%; justify-content:space-between;">
+            <p style="margin-bottom:1.7rem;">
+              [Placeholder — A third testimonial. Consider one from a web fiction writer 
+              if that's a target audience, to signal that you understand that world.]
+            </p>
+            <div class="testimonial__author" style="display:flex; align-items:center; justify-content:space-between; margin-top:auto;">
+              <div>
+                <strong>Name, Title/Genre</strong><br>
+                <span style="font-size:0.97em;">"Brief context"</span>
+              </div>
+              <div class="testimonial__portrait" style="width:48px; height:48px; border-radius:50%; background:#e0e0e0; margin-left:1.1rem; display:flex; align-items:center; justify-content:center; font-size:1.7rem; color:#b0a080; box-shadow:0 2px 8px 0 rgba(0,0,0,0.07);">
+                <span style="opacity:0.5;">IMG</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container text-center fade-up">
+      <h2>Ready for this kind of feedback on your manuscript?</h2>
+      <div class="divider divider--center"></div>
+      <p class="muted" style="max-width:440px; margin:0 auto 2rem">
+        Get in touch and we'll figure out the right kind of edit for where you are.
+      </p>
+      <div class="btn-group" style="justify-content:center">
+        <a href="contact.html" class="btn btn--primary btn--lg">Request a Consultation</a>
+        <a href="services.html" class="btn btn--outline btn--lg">See All Services</a>
+      </div>
+    </div>
+  </section>
+  -->
+
+
+  <!-- ══════════════════════════════════════
+       QR CODES
+  ══════════════════════════════════════ -->
+  <section class="section">
+    <div class="container">
+      <div class="fade-up text-center" style="margin-bottom:2.5rem">
+        <h2>Newsletters.</h2>
+        <div class="divider divider--center"></div>
+        <p class="muted" style="max-width:540px; margin:0 auto">
+          Scan a code to visit my Substack or the Stitcher's Archive directly from your device.
+        </p>
+      </div>
+      <div class="qr-grid">
+        <div class="qr-card">
+          <a href="https://stichersarchive.substack.com/" target="_blank" rel="noopener noreferrer">
+            <img src="images/stitcher_stack_qr.png" alt="Stitcher's Archive QR Code" class="qr-img">
+          </a>
+          <div class="qr-label">Stitcher's Archive</div>
+        </div>
+        <div class="qr-card">
+          <a href="https://iannytes.substack.com/" target="_blank" rel="noopener noreferrer">
+            <img src="images/authorscabin_stack-qr.png" alt="Author's Cabin QR Code" class="qr-img">
+          </a>
+          <div class="qr-label">Author's Cabin</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <style>
+    .qr-grid {
+      display: flex;
+      gap: 2.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
+    .qr-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      box-shadow: 0 4px 24px 0 rgba(90,70,52,0.08);
+      padding: 2rem 2.5rem 1.5rem 2.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 220px;
+      max-width: 320px;
+      margin-bottom: 1.5rem;
+    }
+    .qr-img {
+      width: 180px;
+      height: 180px;
+      object-fit: contain;
+      margin-bottom: 1.1rem;
+    }
+    .qr-label {
+      font-size: 1.08rem;
+      font-weight: 600;
+      color: var(--brown);
+      margin-top: 0.2rem;
+      letter-spacing: 0.01em;
+    }
+    @media (max-width: 700px) {
+      .qr-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+      }
+      .qr-card {
+        padding: 1.2rem 1.2rem 1rem 1.2rem;
+        min-width: 0;
+        width: 100%;
+        max-width: 340px;
+      }
+      .qr-img {
+        width: 140px;
+        height: 140px;
+      }
+    }
+  </style>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="main.js"></script>
+  <script>
+    buildNav('examples.html');
+    buildFooter();
+  </script>
+</body>
+</html>

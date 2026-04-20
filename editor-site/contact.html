@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Ian Nytes, Developmental Editor & Content Consultant</title>
+  <meta name="description" content="Schedule a free consultation for developmental editing, website copy, story critique, or content strategy." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="contact.html" />
+  <meta property="og:title" content="Contact — Ian Nytes, Developmental Editor & Content Consultant" />
+  <meta property="og:description" content="Schedule a free consultation for developmental editing, website copy, story critique, or content strategy." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Contact — Ian Nytes, Developmental Editor & Content Consultant" />
+  <meta name="twitter:description" content="Schedule a free consultation for developmental editing, website copy, story critique, or content strategy." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="hero__eyebrow">Schedule a Free Consultation</span>
+      <h1>Let's scope your content or story project</h1>
+      <p>Fill out the form below and I'll respond within 48 hours to confirm the best next step for your project.</p>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       CONTACT SECTION
+  ══════════════════════════════════════ -->
+  <section class="section">
+    <div class="container">
+      <div class="grid-2" style="gap:5rem; align-items:start">
+
+        <!-- Form -->
+        <div class="fade-up">
+          <div class="form">
+              <h3 style="margin-bottom:0.5rem">Start with a free consultation</h3>
+              <p style="font-size:0.92rem; color:var(--text-muted); margin-bottom:2rem">
+                Tell me a bit about your project and what kind of help you're looking for.
+                The more detail, the better — this helps me recommend the right service.
+
+            <form id="contactForm" novalidate>
+
+              <!-- Name + Email row -->
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Full Name <span style="color:var(--terracotta)">*</span></label>
+                  <input type="text" id="name" name="name" 
+                         autocomplete="name" placeholder="Your name" />
+                  <div class="form-error-msg" id="nameError"></div>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address <span style="color:var(--terracotta)">*</span></label>
+                  <input type="email" id="email" name="email" 
+                         autocomplete="email" placeholder="you@example.com" />
+                  <div class="form-error-msg" id="emailError"></div>
+                </div>
+              </div>
+
+              <!-- Service type -->
+              <div class="form-group">
+                <label for="serviceType">Service Type <span style="color:var(--terracotta)">*</span></label>
+                <select id="serviceType" name="serviceType">
+                  <option value="">Select a service…</option>
+                  <option value="Developmental Editing">Developmental Editing</option>
+                  <option value="Newsletter Service">Newsletter Service</option>
+                  <option value="Website Copy">Website Copy</option>
+                  <option value="Story Critique">Story Critique</option>
+                  <option value="Story Consultation">Story Consultation</option>
+                </select>
+                <div class="form-error-msg" id="serviceTypeError"></div>
+              </div>
+
+              <!-- Manuscript / project details -->
+              <div class="form-group" style="margin-top:1.5rem">
+                <label for="projectTitle">Project Title (optional)</label>
+                <input type="text" id="projectTitle" name="projectTitle" 
+                       placeholder="Working title of your manuscript" />
+              </div>
+
+              <!-- Message -->
+              <div class="form-group">
+                <label for="message">Tell me about your project <span style="color:var(--terracotta)">*</span></label>
+                <textarea id="message" name="message" 
+                          placeholder="Describe your manuscript: genre, premise, where you are in the process, and what kind of feedback you're hoping for. The more detail, the better."></textarea>
+                <div class="form-error-msg" id="messageError"></div>
+                <p class="form__note">Minimum 20 characters. The more context you give, the more useful my response will be.</p>
+              </div>
+
+              <button type="submit" id="submitBtn" class="btn btn--primary btn--lg" 
+                      style="width:100%; margin-top:0.5rem">
+                Send Message
+              </button>
+
+              <!-- Status messages -->
+              <div class="form-success" id="formSuccess" role="alert">
+                <strong>Message sent!</strong>
+                <p style="margin-top:0.25rem; font-size:0.93rem">
+                  Thanks for reaching out. I'll reply to your email within 48 hours.
+                </p>
+              </div>
+              <div class="form-error" id="formError" role="alert">
+                <strong>Something went wrong.</strong>
+                <p style="margin-top:0.25rem; font-size:0.93rem">
+                  Please try again, or email me directly at 
+                  <a href="mailto:ian.nytes@gmail.com" style="color:inherit; text-decoration:underline">
+                    ian.nytes@gmail.com
+                  </a>.
+                </p>
+              </div>
+
+            </form>
+          </div>
+        </div>
+
+        <!-- Sidebar info -->
+        <div class="fade-up" style="transition-delay:0.15s">
+
+          <h3 style="margin-bottom:1.5rem">Before you reach out</h3>
+
+          <div style="display:flex; flex-direction:column; gap:1.5rem; margin-bottom:2.5rem">
+            <div style="display:flex; gap:1rem; align-items:flex-start">
+              <span style="font-size:1.5rem; flex-shrink:0">📬</span>
+              <div>
+                <h4 style="font-size:1rem; margin-bottom:0.25rem">Response time</h4>
+                <p style="font-size:0.93rem; color:var(--text-muted)">
+                  I typically respond to all inquiries within 48 hours, 
+                  Monday through Friday.
+                </p>
+              </div>
+            </div>
+            <div style="display:flex; gap:1rem; align-items:flex-start">
+              <span style="font-size:1.5rem; flex-shrink:0">📋</span>
+              <div>
+                <h4 style="font-size:1rem; margin-bottom:0.25rem">What to include</h4>
+                <p style="font-size:0.93rem; color:var(--text-muted)">
+                  Genre, approximate word count, where you are in the process, 
+                  and what you're most hoping feedback will help you address.
+                </p>
+              </div>
+            </div>
+            <div style="display:flex; gap:1rem; align-items:flex-start">
+              <span style="font-size:1.5rem; flex-shrink:0">💬</span>
+              <div>
+                <h4 style="font-size:1rem; margin-bottom:0.25rem">Not sure what to request?</h4>
+                <p style="font-size:0.93rem; color:var(--text-muted)">
+                  Book a free Story Consultation. We'll spend an hour talking through 
+                  your project and I'll tell you exactly what you need next.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Direct email -->
+          <div style="
+            background:var(--white); border:1px solid var(--border);
+            border-radius:var(--radius-sm); padding:1.5rem;
+            margin-bottom:2rem;
+          ">
+            <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:0.5rem">
+              Prefer email? Reach me directly:
+            </p>
+            <a href="mailto:ian.nytes@gmail.com" style="
+              font-size:1.05rem; color:var(--brown); font-weight:600;
+              display:flex; align-items:center; gap:0.5rem;
+            ">
+              ✉ ian.nytes@gmail.com
+            </a>
+          </div>
+
+          <!-- Services quick link -->
+          <div style="
+            background: linear-gradient(135deg, rgba(215,122,97,0.08), rgba(90,70,52,0.04));
+            border:1px solid rgba(215,122,97,0.2);
+            border-radius:var(--radius-sm); padding:1.5rem;
+          ">
+            <h4 style="font-size:1rem; margin-bottom:0.5rem">Service overview</h4>
+            <ul style="display:flex; flex-direction:column; gap:0.5rem">
+              <li style="font-size:0.9rem; display:flex; justify-content:space-between; align-items:center">
+                <span>Developmental Editing</span>
+                <a href="services.html#developmental" style="
+                  color:var(--terracotta); font-size:0.82rem; font-weight:500;
+                ">Details →</a>
+              </li>
+              <li style="
+                height:1px; background:var(--border);
+                margin:0.1rem 0;
+              "></li>
+              <li style="font-size:0.9rem; display:flex; justify-content:space-between; align-items:center">
+                <span>Story Critique</span>
+                <a href="services.html#critique" style="
+                  color:var(--terracotta); font-size:0.82rem; font-weight:500;
+                ">Details →</a>
+              </li>
+              <li style="
+                height:1px; background:var(--border);
+                margin:0.1rem 0;
+              "></li>
+              <li style="font-size:0.9rem; display:flex; justify-content:space-between; align-items:center">
+                <span>Story Consultation — <strong>Free</strong></span>
+                <a href="services.html#consultation" style="
+                  color:var(--terracotta); font-size:0.82rem; font-weight:500;
+                ">Details →</a>
+              </li>
+              <li style="
+                height:1px; background:var(--border);
+                margin:0.1rem 0;
+              "></li>
+              <li style="font-size:0.9rem; display:flex; justify-content:space-between; align-items:center">                <span>Newsletter Service</span>
+                <a href="services.html#newsletter" style="
+                  color:var(--terracotta); font-size:0.82rem; font-weight:500;
+                ">Details →</a>
+              </li>
+              <li style="
+                height:1px; background:var(--border);
+                margin:0.1rem 0;
+              "></li>
+              <li style="font-size:0.9rem; display:flex; justify-content:space-between; align-items:center">                <span>Website Copy</span>
+                <a href="services.html#copy" style="
+                  color:var(--terracotta); font-size:0.82rem; font-weight:500;
+                ">Details →</a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="main.js"></script>
+  <script>
+    buildNav('contact.html');
+    buildFooter();
+
+    /* ── Pre-fill service from URL params ── */
+    /* e.g., contact.html?service=Story+Consultation */
+    document.addEventListener('DOMContentLoaded', () => {
+      const params  = new URLSearchParams(window.location.search);
+      const service = params.get('service');
+      if (service) {
+        const sel = document.getElementById('serviceType');
+        for (const opt of sel.options) {
+          if (opt.value === service) {
+            sel.value = service;
+            sel.dispatchEvent(new Event('change'));
+            break;
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

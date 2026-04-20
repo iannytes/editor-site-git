@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Stitcher's Archive — Ian Nytes</title>
+  <meta name="description" content="The Stitcher's Archive — an ongoing web serial by Ian Nytes." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="archive.html" />
+  <meta property="og:title" content="The Stitcher's Archive — Ian Nytes" />
+  <meta property="og:description" content="The Stitcher's Archive — an ongoing web serial by Ian Nytes." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="The Stitcher's Archive — Ian Nytes" />
+  <meta name="twitter:description" content="The Stitcher's Archive — an ongoing web serial by Ian Nytes." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .archive-page {
+      min-height: 80vh;
+    }
+
+    .archive-ornament {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+      color: rgba(215,122,97,0.4);
+    }
+
+    .archive-ornament::before,
+    .archive-ornament::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(215,122,97,0.4));
+      max-width: 120px;
+    }
+
+    .archive-ornament::after {
+      background: linear-gradient(to left, transparent, rgba(215,122,97,0.4));
+    }
+
+    .archive-feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin: 3rem 0;
+    }
+
+    .archive-feature {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      background: rgba(255,248,240,0.04);
+      border: 1px solid rgba(255,248,240,0.1);
+      border-radius: var(--radius-md);
+    }
+
+    .archive-feature .icon { font-size: 2rem; margin-bottom: 0.75rem; }
+    .archive-feature h4 { color: var(--cream); font-size: 1rem; margin-bottom: 0.4rem; }
+    .archive-feature p { color: rgba(255,248,240,0.6); font-size: 0.88rem; }
+
+    @media (max-width: 1500px) {
+      .archive-feature-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 1500px) {
+      .sticky-note {
+        position: static !important;
+        top: auto !important;
+        left: auto !important;
+        transform: rotate(0deg) !important;
+        width: 92vw !important;
+        min-width: 0 !important;
+        max-width: 98vw !important;
+        margin: 1.5rem auto 1.5rem auto !important;
+        padding: 1.1rem 0.7rem 1.1rem 0.7rem !important;
+        box-shadow: 0 4px 16px 0 rgba(90,70,52,0.10);
+      }
+      #sticky-note-mobile-section {
+        display: block !important;
+      }
+    }
+
+    /* Scale and reposition sticky note for mid-size screens (laptops/tablets) */
+    @media (min-width: 641px) and (max-width: 1100px) {
+      .sticky-note {
+        transform: scale(0.85) rotate(-2.5deg);
+        left: 2% !important;
+        top: clamp(2.5rem, 5vw, 4rem);
+        max-width: 300px;
+      }
+    }
+
+    @media (max-width: 1500px) {
+      .archive-hero-logo {
+        position: static !important;
+        display: block !important;
+        margin: 2.2rem auto 1.2rem auto !important;
+        height: 96px !important;
+        max-width: 80vw !important;
+        right: auto !important;
+        top: auto !important;
+        filter: drop-shadow(0 2px 8px rgba(0,0,0,0.12));
+        transform: rotate(0deg) !important;
+      }
+      /* Move sticky note down at <=1500px so it doesn't cover the title */
+      .sticky-note {
+        top: clamp(7.5rem, 13vw, 11rem) !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+
+  <!-- ══════════════════════════════════════
+       ARCHIVE HERO (dark, immersive)
+  ══════════════════════════════════════ -->
+  <section class="archive-page section--dark" style="padding:7rem 0 5rem; position:relative; overflow:hidden">
+    <!-- Background decoration -->
+    <div style="
+      position:absolute; inset:0; pointer-events:none;
+      background:
+        radial-gradient(ellipse 50% 60% at 80% 50%, rgba(215,122,97,0.08) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 40% at 15% 30%, rgba(90,70,52,0.3) 0%, transparent 60%);
+    "></div>
+
+    <!-- Repeating pattern -->
+    <div style="
+      position:absolute; inset:0; pointer-events:none; opacity:0.03;
+      background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2240%22 height=%2240%22><text y=%2228%22 font-size=%2220%22 fill=%22%23fff%22>✦</text></svg>');
+      background-size: 40px 40px;
+    "></div>
+
+    <div class="container" style="max-width:760px; text-align:center; position:relative">
+      <div class="archive-ornament">
+        <span style="font-size:1.2rem">✦</span>
+      </div>
+
+      <span style="
+        font-size:0.78rem; font-weight:600; letter-spacing:0.15em;
+        text-transform:uppercase; color:rgba(215,122,97,0.8);
+        display:block; margin-bottom:1.25rem;
+      ">Web Serial</span>
+
+      <h1 style="
+        color:var(--cream); font-size:clamp(2.5rem,6vw,4.5rem);
+        font-style:italic; font-weight:700;
+        line-height:1.15; margin-bottom:1.5rem;
+        text-align: center;
+      ">
+        The Stitcher's Archive
+      </h1>
+      <img src="images/stitchersarchivelogo.png" alt="Stitcher's Archive Logo" class="archive-hero-logo" style="
+        position: absolute;
+        top: clamp(2.5rem, 6vw, 4.5rem);
+        right: -14vw;
+        height: clamp(240px, 44vw, 400px);
+        width: auto;
+        z-index: 20;
+        filter: drop-shadow(0 2px 24px rgba(0,0,0,0.22));
+        background: transparent;
+        pointer-events: none;
+        max-width: 52vw;
+        transform: rotate(7deg);
+      ">
+
+      <p style="
+        font-size:1.15rem; color:rgba(255,248,240,0.8);
+        line-height:1.8; margin-bottom:1rem; max-width:580px; margin-inline:auto;
+      ">
+      A collection of objects and the stories that make them special.
+      </p>
+
+      <p style="
+        font-family:var(--font-serif); font-style:italic;
+        font-size:1.05rem; color:rgba(255,248,240,0.55);
+        margin-bottom:3rem;
+      ">
+        Subscribe so you don't miss a new story from the Archive.
+      </p>
+
+      <!-- Newsletter Signup (Minimal, theme-matching) -->
+      <form action="https://stichersarchive.substack.com/api/v1/free" method="POST" target="_blank" style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.75rem;
+        background: var(--white);
+        border: 1.5px solid var(--border);
+        border-radius: var(--radius-md);
+        box-shadow: 0 4px 24px 0 rgba(90,70,52,0.10);
+        max-width: 420px;
+        margin: 2.5rem auto 2rem auto;
+        padding: 1.2rem 1.5rem 1.2rem 1.5rem;
+      ">
+        <input type="email" name="email" placeholder="Your email address" required style="
+          flex: 1;
+          padding: 0.9rem 1.1rem;
+          border: 1px solid var(--border);
+          border-radius: var(--radius-sm);
+          font-size: 1.05rem;
+          font-family: var(--font-sans);
+          background: var(--white);
+          color: var(--text);
+        ">
+        <input type="hidden" name="embed" value="1">
+        <button type="submit" style="
+          padding: 0.9rem 1.6rem;
+          background: var(--terracotta);
+          color: var(--white);
+          border: none;
+          border-radius: var(--radius-sm);
+          font-size: 1.05rem;
+          font-family: var(--font-sans);
+          font-weight: 600;
+          cursor: pointer;
+          transition: background 0.2s;
+        " onmouseover="this.style.background='var(--brown)'" onmouseout="this.style.background='var(--terracotta)'">
+          Subscribe
+        </button>
+      </form>
+
+      <div class="btn-group" style="justify-content:center">
+        <a href="https://stichersarchive.substack.com/" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--lg">
+          Enter the Archive ↗
+        </a>
+        <a href="projects.html" class="btn btn--outline-light btn--lg">
+          Back to Projects
+        </a>
+      </div>
+
+      <div class="archive-feature-grid">
+        <div class="archive-feature">
+          <a href="https://www.instagram.com/the.stitchers.archive/" target="_blank" rel="noopener noreferrer" style="text-decoration:none; color:inherit; display:flex; flex-direction:column; align-items:center;">
+            <div class="icon" style="font-size:2.2rem; margin-bottom:0.75rem;">
+              <!-- Simple Instagram Outline Icon -->
+              <svg width="1.8em" height="1.8em" viewBox="0 0 448 512" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;">
+                <rect x="64" y="64" width="320" height="320" rx="80" stroke="currentColor" stroke-width="32" fill="none"/>
+                <circle cx="224" cy="224" r="64" stroke="currentColor" stroke-width="32" fill="none"/>
+                <circle cx="320" cy="128" r="16" fill="currentColor"/>
+              </svg>
+            </div>
+            <h4 style="text-align:center; width:100%; margin-top: 1.1rem;">Follow the Archive on Instagram!</h4>
+            <p style="color:rgba(255,248,240,0.6); font-size:0.88rem; text-align:center; width:100%;">@the.stitchers.archive</p>
+          </a>
+        </div>
+        <div class="archive-feature">
+          <a href="index.html" style="text-decoration:none; color:inherit; display:flex; flex-direction:column; align-items:center;">
+            <div class="icon" style="margin-bottom:0.75rem;">
+              <img src="images/wagon-wheel.png" alt="Wagon wheel icon" style="height:3.2rem; width:auto; display:inline-block; filter: brightness(0) invert(1);" />
+            </div>
+            <h4 style="text-align:center; width:100%; margin-top: 1.1rem;">Learn more about Stitching and the world of Pilfer!</h4>
+            <p style="color:rgba(255,248,240,0.6); font-size:0.88rem; text-align:center; width:100%;">Click to explore the lore and magic system.</p>
+          </a>
+        </div>
+        <div class="archive-feature">
+          <a href="https://discord.gg/PfYYC6QmCt" target="_blank" rel="noopener noreferrer" style="text-decoration:none; color:inherit; display:flex; flex-direction:column; align-items:center;">
+            <div class="icon" style="margin-bottom:0.75rem;">
+              <!-- Discord SVG Icon -->
+              <svg width="3.2rem" height="3.2rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:middle;">
+                <path d="M20.317 4.369A19.791 19.791 0 0 0 16.885 3.1a.074.074 0 0 0-.079.037c-.35.607-.738 1.396-1.014 2.013a18.524 18.524 0 0 0-5.482 0 12.51 12.51 0 0 0-1.022-2.013.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.369a.069.069 0 0 0-.032.027C.533 9.09-.32 13.579.099 18.021a.082.082 0 0 0 .031.056c2.128 1.565 4.195 2.51 6.228 3.155a.077.077 0 0 0 .084-.027c.48-.66.907-1.356 1.266-2.084a.076.076 0 0 0-.041-.104c-.676-.256-1.32-.568-1.943-.936a.077.077 0 0 1-.008-.127c.13-.098.26-.2.382-.304a.074.074 0 0 1 .077-.01c4.084 1.872 8.504 1.872 12.546 0a.075.075 0 0 1 .078.009c.123.104.252.206.383.304a.077.077 0 0 1-.006.127 12.298 12.298 0 0 1-1.944.936.076.076 0 0 0-.04.105c.36.728.787 1.423 1.266 2.084a.076.076 0 0 0 .084.028c2.04-.645 4.108-1.59 6.229-3.155a.077.077 0 0 0 .03-.055c.5-5.177-.838-9.637-3.548-13.625a.061.061 0 0 0-.03-.028zM8.02 15.331c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.418 2.157-2.418 1.21 0 2.175 1.094 2.157 2.418 0 1.334-.955 2.419-2.157 2.419zm7.974 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.418 2.157-2.418 1.21 0 2.175 1.094 2.157 2.418 0 1.334-.947 2.419-2.157 2.419z" fill="#fff"/>
+              </svg>
+            </div>
+            <h4 style="text-align:center; width:100%; margin-top: 1.1rem;">Click here to submit an item for consideration in the archive via discord!</h4>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div id="sticky-note" class="sticky-note" style="
+      position: absolute;
+      top: clamp(3.5rem, 7vw, 5.5rem);
+      left: 12%;
+      width: clamp(240px, 32vw, 340px);
+      z-index: 20;
+      background: #fffbe6;
+      border: 1.5px solid #e2c98f;
+      border-radius: 12px 32px 18px 8px / 18px 8px 32px 12px;
+      box-shadow: 0 8px 32px 0 rgba(90,70,52,0.18), 0 2px 8px 0 rgba(215,122,97,0.08);
+      padding: clamp(1.2rem, 3vw, 2.1rem) 1.2rem 1.2rem 1.2rem;
+      font-family: var(--font-serif);
+      font-size: clamp(1rem, 1.5vw, 1.13rem);
+      line-height: 1.7;
+      color: #111;
+      font-style: italic;
+      transform: rotate(-2.5deg);
+      transition: box-shadow 0.2s, transform 0.2s;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      pointer-events: auto;
+    ">
+      <div style="
+        font-size: clamp(1.1rem, 1.7vw, 1.25rem);
+        font-weight: 700;
+        color: #111;
+        margin-bottom: 0.7rem;
+        font-style: normal;
+      ">What is Stitching?</div>
+      <p style="margin-bottom:1.1rem; position:relative; z-index:2; color:#111;">Every object you've ever loved has a story.<br>Not a metaphor. An actual story, embedded into the material itself. The ring your grandmother wore every day for forty years. The baseball you caught at your first little league game. The jacket you were wearing the night everything changed.</p>
+      <p style="margin-bottom:1.1rem; position:relative; z-index:2; color:#111;">To a stitcher, that story is a song. An echo of us. Our essence, embued into the things we hold close through the emotion we bind to them.</p>
+      <p style="margin-bottom:0.2rem; position:relative; z-index:2; color:#111;">What a stitcher does is pull that story out of the object, twisting it to fill a purpose, giving the item magical properties. To a stitcher, sentiment is worth more than gold. Here at Stitcher's Archive, we catalogue such objects, bringing them to you to share their powerful stories.</p>
+    </div>
+
+  </section>
+
+  <!-- ══════════════════════════════════════
+       EXCERPT / PREVIEW
+  ══════════════════════════════════════ -->
+  <section class="section section--alt">
+    <h2 style="text-align:center; width:100%; font-size:2.1rem; font-family:var(--font-serif); color:#7a4c1e; margin-bottom:2.2rem; margin-top:0.5rem; letter-spacing:0.01em; font-weight:700;">Excerpts on Stitching</h2>
+    <div class="container" style="width:100%; max-width:none; display:flex; gap:3.5rem; justify-content:center; flex-wrap:wrap;">
+      <div class="flashcard-excerpt" data-title="Supplemental Text for Pilfer | Gistrta and her protoge" data-fulltext="&lt;p&gt;The voices are sweet. They don't use words. It's as though I can hear feelings, sentiments, a latent warmth that has no name I know. It isn't really hearing either. Not exactly. But my, if the rain doesn't sing.&lt;/p&gt;&lt;p&gt;I wouldn't know what to call it other than a song. I want to dive into it. To touch the voice of it.&lt;/p&gt;&lt;p&gt;Gistra has warned me. She's told me to stay away from songs that are older than me, and the rain is far older than I.&lt;/p&gt;&lt;p&gt;But it feels like a father calling his child inside for dinner. Every time it rains I hear that voice, the same warmth each time, the same rhythm.&lt;/p&gt;&lt;p&gt;&lt;em&gt;&quot;Your father never cared for you. That moment isn't yours.&quot;&lt;/em&gt; Gistra says, and my floating mind comes crashing back to sick solid ground. All I wanted was to float away.&lt;/p&gt;&lt;p&gt;&lt;em&gt;&quot;No,&quot;&lt;/em&gt; I tell her. &lt;em&gt;&quot;But it's how I imagine it would be.&quot;&lt;/em&gt; She couldn't see it. In the rain there is a dream of a happy life. Some story the rain has touched carries the beginning I sought, the middle, the ending too. Somewhere in the weave of it is my dream, lived in a life far past, or maybe just yesterday.&lt;/p&gt;&lt;p&gt;&lt;em&gt;&quot;You'll lose yourself to it.&quot;&lt;/em&gt; she says. &lt;em&gt;&quot;You can drown in the song. Cease to be you and become instead the tiny moments of everyone else. Always seeking. Always disappointed when you have to return to the moments you inhabit now, in this body.&quot;&lt;/em&gt; She lifts my hand.&lt;/p&gt;&lt;p&gt;&lt;em&gt;&quot;What did you see?&quot;&lt;/em&gt; I ask. &lt;em&gt;&quot;When you touched the place you're telling me not to go?&quot;&lt;/em&gt;&lt;/p&gt;&lt;p&gt;&lt;em&gt;&quot;Everything there is.&quot;&lt;/em&gt; She answers. &lt;em&gt;&quot;The whole story. And now I'm not me anymore. Even though I inhabit this form, part of me is still there. Drifting. Lost in the web of all the things that have been. I want to go back. But I can't. Not yet.&quot;&lt;/em&gt;&lt;/p&gt;&lt;p&gt;I don't understand. Not entirely. But I want to, and that want is its own danger.&lt;/p&gt;&lt;p&gt;&lt;em&gt;&quot;You're describing the greatest experience available in this little life,&quot;&lt;/em&gt; I tell her. &lt;em&gt;&quot;Walking me past a pool of gold and telling me not to dive in.&quot;&lt;/em&gt;&lt;/p&gt;&lt;p&gt;&lt;em&gt;&quot;Yes.&quot;&lt;/em&gt; She answers. &lt;em&gt;&quot;And you will sit before that pool every day of your life. But you cannot dive in.&quot;&lt;/em&gt;&lt;/p&gt;&lt;p&gt;She can tell it isn't sinking in. But perhaps this is what being a stitcher is.&lt;/p&gt;&lt;p&gt;&lt;em&gt;&quot;What is something you are thankful for in this life?&quot;&lt;/em&gt;&lt;/p&gt;&lt;p&gt;I look out at Taj.&lt;/p&gt;&lt;p&gt;&lt;em&gt;&quot;Him,&quot;&lt;/em&gt; I tell her.&lt;/p&gt;&lt;p&gt;&lt;em&gt;&quot;If you jump in, he won't matter to you any longer. He will be one drop in the ocean and you'll never find him again. Not the way you know him right now.&quot;&lt;/em&gt; She pauses. &lt;em&gt;&quot;Cherish that. It's special.&quot;&lt;/em&gt;&lt;/p&gt;&lt;p&gt;I cross my arms, still thinking of how warm the gleam feels off the surface of gold.&lt;/p&gt;&lt;p&gt;&lt;em&gt;&quot;For him then.&quot;&lt;/em&gt;&lt;/p&gt;&lt;p&gt;&lt;em&gt;&quot;It has to be for you.&quot;&lt;/em&gt;&lt;/p&gt;&lt;p&gt;I shake my head. &lt;em&gt;&quot;It will never be.&quot;&lt;/em&gt;&lt;/p&gt;&lt;p&gt;&lt;em&gt;&quot;Then I pray that he lives.&quot;&lt;/em&gt;&lt;/p&gt;" style="background:#fffbe6; border:1.5px solid #e2c98f; border-radius:18px 32px 18px 8px / 18px 8px 32px 12px; box-shadow:0 8px 32px 0 rgba(90,70,52,0.13), 0 2px 8px 0 rgba(215,122,97,0.10); padding:2.1rem 1.5rem 2rem 1.5rem; margin:2.5rem 0 2.5rem 0; max-width:480px; transform:rotate(4deg); position:relative; left:0;">
+        <h3 style="color:#a67c52; font-size:1.13rem; font-family:var(--font-serif); margin-bottom:1.1rem; text-align:left; letter-spacing:0.01em;">Supplemental Text for Pilfer | Gistrta and her protoge</h3>
+        <div style="color:#222; font-size:1.04rem; line-height:1.7; font-family:var(--font-serif); text-align:left; white-space:pre-line;">
+<p>The voices are sweet. They don't use words. It's as though I can hear feelings, sentiments, a latent warmth that has no name I know. It isn't really hearing either. Not exactly. But my, if the rain doesn't sing.</p>
+<p>I wouldn't know what to call it other than a song. I want to dive into it. To touch the voice of it.</p>
+<p>Gistra has warned me. She's told me to stay away from songs that are older than me, and the rain is far older than I.</p>
+<p>But it feels like a father calling his child inside for dinner. Every time it rains I hear that voice, the same warmth each time, the same rhythm.</p>
+        </div>
+        <button class="readMoreBtn" style="margin-top:1.5rem; display:block; margin-left:auto; background:var(--terracotta); color:#fff; border:none; border-radius:6px; font-size:1rem; font-family:var(--font-sans); font-weight:600; cursor:pointer; padding:0.7rem 1.4rem; box-shadow:0 2px 8px 0 rgba(90,70,52,0.08); transition:background 0.2s;">Read More</button>
+      </div>
+      <!-- Example second card -->
+      <div class="flashcard-excerpt" data-title="Chapter 7 | Gistra and the Courier" data-fulltext="&lt;p&gt;This is a second card example. You can add more cards by duplicating this structure and changing the preview and full text.&lt;/p&gt;&lt;p&gt;Each card can have its own story, excerpt, or content.&lt;/p&gt;" style="background:#fffbe6; border:1.5px solid #e2c98f; border-radius:18px 32px 18px 8px / 18px 8px 32px 12px; box-shadow:0 8px 32px 0 rgba(90,70,52,0.13), 0 2px 8px 0 rgba(215,122,97,0.10); padding:1.1rem 1.2rem 1.1rem 1.2rem; margin:2.5rem 0 2.5rem 0; max-width:420px; min-height:300px; height:300px; overflow:hidden; transform:rotate(-3deg); position:relative; left:0;">
+        <h3 style="color:#a67c52; font-size:1.13rem; font-family:var(--font-serif); margin-bottom:1.1rem; text-align:left; letter-spacing:0.01em;">Chapter 7 | Gistra and the Courier</h3>
+        <div style="color:#222; font-size:1.04rem; line-height:1.7; font-family:var(--font-serif); text-align:left; white-space:pre-line;">
+      “Why’d you need copper from the people here?”<br><br>“These were the coins they brought with them upon fleeing their homes. I brought the coin's story out of them, twisting it to fit my purpose. They were things held close, kept track of, now, they keep track of themselves.”
+        </div>
+      </div>
+      <!-- Example third card -->
+      <div class="flashcard-excerpt" data-title="Chapter 6 | Gistra and The Courier in the abyss" data-fulltext="&lt;p&gt;There’s nothing but black and me and her. Axel is gone. The Cavern is gone. The whole world is gone. It’s me, her, the coins she’s hunched over, and the black.&lt;/p&gt;&lt;p&gt;“This is the abyss.” I whisper, turning in the void to look out into featureless dark in every direction. All I can see is her.&lt;/p&gt;&lt;p&gt;“But a glimpse,” She speaks, but her mouth doesn’t move. Her eyes cast over the pile of coins like a dog guarding its food.&lt;/p&gt;&lt;p&gt;A single hand bursts from below and grabs hold of her neck.&lt;/p&gt;&lt;p&gt;“Gi-Gis?” I stammer.&lt;/p&gt;&lt;p&gt;Then, the coins began to erupt with grasping hands beneath her. Limb after limb rises up in sickly decayed flesh. Their fingers dig into her, clutching her body, pulling at her. With each arm that reaches out from the coins another springs forth like a branching tree limb.&lt;/p&gt;&lt;p&gt;“Copper shield.” Gistra utters. Her voice is a booming echo in the endless chasm.&lt;/p&gt;&lt;p&gt;“Copper shield.” she continues as more hands enwrap her form.&lt;/p&gt;&lt;p&gt;I panic and sprint to her. I pry them away. They crack and fall like dried branches. More sprout from the severed parts and now I too am grasped. &lt;/p&gt;&lt;p&gt;“In absence of home, the only comfort I feel.” Her voice is all around me. Her eyes are drinking in the void, the whites being smothered out.&lt;/p&gt;&lt;p&gt;“Copper shield, copper shield.” She chants.&lt;/p&gt;&lt;p&gt;“Whose bounty pays for wheat fields yields.” Gistra cries, a maddening smile ripping across her face. She lets out a shrill laugh.&lt;/p&gt;&lt;p&gt;Who is this? &lt;/p&gt;&lt;p&gt;“Copper shield, copper shield.” It speaks.&lt;/p&gt;&lt;p&gt;More hands. I scramble to tear away the limbs as quickly as they sprout out. Blood from them covers me, pooling beneath us drowning the coins.&lt;/p&gt;&lt;p&gt;“Clutched to my breast for future’s meal.”&lt;/p&gt;&lt;p&gt;The hands start to dig their nails into me. I cry in pain as they break into my skin, feeling them rip into the meat of my legs. Feeling them writhe through the fibers of my tendons, tunneling like worms. Incredible, indescribable pain.&lt;/p&gt;&lt;p&gt;“Copper shield, copper shield!” Gistra screams. I can’t even tell where her voice is coming from any longer in the mass of horror that is unfolding before me. &lt;/p&gt;&lt;p&gt;“Whose blood would be spilt for your beauty to steal?” The whisper comes from within my own mind.&lt;/p&gt;&lt;p&gt;The black is all there is.&lt;/p&gt;" style="background:#fffbe6; border:1.5px solid #e2c98f; border-radius:18px 32px 18px 8px / 18px 8px 32px 12px; box-shadow:0 8px 32px 0 rgba(90,70,52,0.13), 0 2px 8px 0 rgba(215,122,97,0.10); padding:1.1rem 1.2rem 1.1rem 1.2rem; margin:2.5rem 0 2.5rem 0; max-width:420px; min-height:300px; height:450px; overflow:hidden; position:relative; left:0;">
+        <h3 style="color:#a67c52; font-size:1.13rem; font-family:var(--font-serif); margin-bottom:1.1rem; text-align:left; letter-spacing:0.01em;">Chapter 6 | Gistra and The Courier in the abyss</h3>
+        <div style="color:#222; font-size:1.04rem; line-height:1.7; font-family:var(--font-serif); text-align:left; white-space:pre-line;">
+          There’s nothing but black and me and her. Axel is gone. The Cavern is gone. The whole world is gone. It’s me, her, the coins she’s hunched over, and the black. “This is the abyss.” I whisper, turning in the void to look out into featureless dark in every direction. All I can see is her. “But a glimpse,” She speaks, but her mouth doesn’t move. Her eyes cast over the pile of coins like a dog guarding its food. A single hand bursts from below and grabs hold of her neck. “Gi-Gis?” I stammer.
+        </div>
+        <button class="readMoreBtn" style="margin-top:1.5rem; display:block; margin-left:auto; background:var(--terracotta); color:#fff; border:none; border-radius:6px; font-size:1rem; font-family:var(--font-sans); font-weight:600; cursor:pointer; padding:0.7rem 1.4rem; box-shadow:0 2px 8px 0 rgba(90,70,52,0.08); transition:background 0.2s;">Read More</button>
+      </div>
+      <!-- Modal for full excerpt -->
+      <div id="excerptModal" style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100vw; height:100vh; background:rgba(30,20,10,0.72); align-items:center; justify-content:center;">
+        <div id="excerptModalContent" style="background:#fffbe6; border:1.5px solid #e2c98f; border-radius:18px 32px 18px 8px / 18px 8px 32px 12px; box-shadow:0 8px 32px 0 rgba(90,70,52,0.13), 0 2px 8px 0 rgba(215,122,97,0.10); padding:2.1rem 1.5rem 2rem 1.5rem; max-width:540px; width:90vw; position:relative; max-height:80vh; overflow-y:auto;">
+          <button id="closeExcerptModal" style="position:absolute; top:1rem; right:1rem; background:none; border:none; font-size:1.5rem; color:#a67c52; cursor:pointer;">&times;</button>
+          <h3 id="excerptModalTitle" style="color:#a67c52; font-size:1.13rem; font-family:var(--font-serif); margin-bottom:1.1rem; text-align:left; letter-spacing:0.01em;"></h3>
+          <div id="excerptModalText" style="color:#222; font-size:1.04rem; line-height:1.7; font-family:var(--font-serif); text-align:left; white-space:pre-line;"></div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       WHERE TO FIND IT
+  ══════════════════════════════════════ -->
+  <section class="section">
+    <div class="container text-center fade-up" style="max-width:700px">
+      <h2>Where to read more about stitching</h2>
+      <div class="divider divider--center"></div>
+      <p class="muted" style="margin-bottom:2.5rem; text-align:left; max-width:540px; margin-inline:auto;">
+        My book is currently out on submission to literary agents. While I’m in this stage of the journey, I’m continuing to build the world behind it and share pieces of what it holds.<br><br>
+        If you’d like to support the project, the best way is to follow along on my social platforms (links below). Every bit of engagement helps keep the momentum going and brings this story closer to publication.
+      </p>
+      <h3 style="margin-top:2.2rem; margin-bottom:1.1rem; font-size:1.15rem; color:var(--cream);">Follow Along</h3>
+      <div class="social-grid" style="margin-bottom:2.2rem;">
+        <a href="https://www.instagram.com/ian_n7/" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--lg">Instagram</a>
+        <a href="https://www.tiktok.com/@nights.books" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--lg">TikTok</a>
+        <a href="https://www.youtube.com/@authorscabinyt" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--lg">YouTube</a>
+      </div>
+
+      <div style="margin:2.5rem 0 1.5rem 0;">
+        <div style="width:100%; max-width:420px; min-width:260px; background:#fff; border:1px solid #EEE; border-radius:12px; box-shadow:0 2px 12px rgba(90,70,52,0.08); padding:1.5rem; display:flex; flex-direction:column; align-items:center; gap:0.8rem; margin-inline:auto;">
+          <img src="images/logo.jpg" alt="Author's Cabin Logo" style="width:62px; height:62px; border-radius:50%; object-fit:cover; margin-bottom:0.7rem;" />
+          <div style="font-family:var(--font-sans); font-size:1.05rem; color:var(--brown); text-align:center; margin-bottom:0.5rem;">Or join my personal newsletter for updates on the project!</div>
+          <h3 style="margin-bottom:0.7rem; font-family:var(--font-serif); font-size:1.15rem; color:var(--brown); text-align:center;">Author's Cabin Newsletter</h3>
+          <form action="https://iannytes.substack.com/subscribe" method="post" target="_blank" style="width:100%; display:flex; flex-direction:row; align-items:center; gap:0.8rem; margin:0;">
+            <input type="email" name="email" placeholder="Your email address" required style="flex:1 1 0; min-width:0; padding:0.9rem 1.1rem; border:1px solid #ccc; border-radius:6px; font-size:1rem;">
+            <button type="submit" style="flex:0 0 auto; white-space:nowrap; padding:0.9rem 1.6rem; background:var(--terracotta); color:#fff; border:none; border-radius:6px; font-size:1rem; font-family:var(--font-sans); font-weight:600; cursor:pointer; transition:background 0.2s;">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="main.js"></script>
+  <script>
+    buildNav('archive.html');
+    buildFooter();
+  </script>
+</body>
+</html>
