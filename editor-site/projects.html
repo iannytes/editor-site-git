@@ -27,6 +27,14 @@
         grid-template-columns: 1fr;
       }
     }
+    .beta-read-heading {
+      font-size: 1.5rem;
+      font-weight: 900;
+      font-style: normal;
+      color: var(--terracotta);
+      margin-bottom: 0.3rem;
+      letter-spacing: 0.01em;
+    }
   </style>
 </head>
 <body>
@@ -108,6 +116,54 @@
           <p style="font-size:0.85rem; color:var(--text-muted); margin-top:1.25rem">
            Currently out on submission. If you're interested in reading or supporting this project, please reach out to me directly through the contact page!
           </p>
+
+          <!-- Beta Read Signup -->
+          <div style="
+            margin-top:2rem;
+            padding:1.5rem;
+            background:rgba(90,70,52,0.06);
+            border:1px solid var(--border);
+            border-radius:var(--radius-md);
+          ">
+            <h3 class="beta-read-heading">Sign Up for a Beta Read</h3>
+            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1rem;">
+              Interested in reading <em>Pilfer</em> before it's published? Leave your email and I'll reach out when beta spots open.
+            </p>
+            <form
+              id="beta-read-form"
+              action="https://formspree.io/f/mkoyqqkr"
+              method="POST"
+              style="display:flex; gap:0.6rem; flex-wrap:wrap; align-items:center;"
+            >
+              <input
+                type="email"
+                name="email"
+                required
+                placeholder="your@email.com"
+                style="
+                  flex:1; min-width:180px;
+                  padding:0.85rem 1rem;
+                  border:1px solid var(--border);
+                  border-radius:var(--radius-sm);
+                  font-size:0.95rem;
+                  color:var(--brown);
+                  background:#fff;
+                  outline:none;
+                  box-sizing:border-box;
+                  height:100%;
+                "
+              />
+              <input type="hidden" name="_subject" value="New Pilfer Beta Read Signup" />
+              <button
+                type="submit"
+                class="btn btn--primary"
+                style="white-space:nowrap;"
+              >Request a Spot</button>
+            </form>
+            <p id="beta-form-thanks" style="display:none; font-size:0.85rem; color:var(--terracotta); margin-top:0.75rem; font-weight:600;">
+              Thanks! I'll be in touch when beta spots open.
+            </p>
+          </div>
         </div>
 
       </div>
@@ -228,6 +284,23 @@ Caught in the tides of the remembrance of his vengeful past and the sullenness o
   <script>
     buildNav('projects.html');
     buildFooter();
+
+    const betaForm = document.getElementById('beta-read-form');
+    if (betaForm) {
+      betaForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const data = new FormData(betaForm);
+        const res = await fetch(betaForm.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          betaForm.style.display = 'none';
+          document.getElementById('beta-form-thanks').style.display = 'block';
+        }
+      });
+    }
   </script>
 </body>
 </html>
