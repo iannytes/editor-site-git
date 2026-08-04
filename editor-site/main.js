@@ -63,6 +63,7 @@ function buildNav(activePage) {
     { href: 'services.html', label: 'Services'         },
     { href: 'examples.html', label: 'Examples'         },
     { href: 'projects.html', label: 'Current Projects' },
+    { href: 'whispr.html',   label: 'Whispr'           },
     { href: 'archive.html',  label: "Stitcher's Archive" },
   ];
 
@@ -131,8 +132,10 @@ function buildFooter() {
               <li><a href="services.html">Services</a></li>
               <li><a href="examples.html">Examples</a></li>
               <li><a href="projects.html">Current Projects</a></li>
+              <li><a href="whispr.html">Whispr</a></li>
               <li><a href="archive.html">Stitcher's Archive</a></li>
               <li><a href="contact.html">Contact</a></li>
+              <li><a href="privacy.html">Privacy Policy</a></li>
             </ul>
           </div>
           <div class="footer__col">

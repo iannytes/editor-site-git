@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108" role="img" aria-labelledby="title desc">
+  <title id="title">Whispr app icon</title>
+  <desc id="desc">A microphone over an open book.</desc>
+  <rect x="1.25" y="1.25" width="105.5" height="105.5" rx="23" fill="none" stroke="#1F1712" stroke-width="1.5"/>
+  <circle cx="54" cy="54" r="44" fill="#FFF8F0"/>
+  <g transform="translate(6.48 10.48) scale(.88)">
+    <path d="M25 34c10-4 20-3 29 5 9-8 19-9 29-5v34c-10-4-20-3-29 5-9-8-19-9-29-5z" fill="none" stroke="#5A4634" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M54 39v34" fill="none" stroke="#5A4634" stroke-width="4" stroke-linecap="round"/>
+    <path d="M45 32a9 9 0 0 1 18 0v15a9 9 0 0 1-18 0z" fill="#FFF8F0"/>
+    <path d="M45 32a9 9 0 0 1 18 0v15a9 9 0 0 1-18 0zM39 45c0 9 6 15 15 15s15-6 15-15M54 60v9M46 69h16" fill="none" stroke="#5A4634" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M49 34h10M49 40h10M49 46h10" fill="none" stroke="#5A4634" stroke-width="2" stroke-linecap="round"/>
+  </g>
+</svg>
