@@ -1,0 +1,22 @@
+{
+  "schema": "sprites-gym.theme.v0",
+  "id": "sprites-gym-water",
+  "name": "Sprites Gym Water Theme",
+  "extends": "base-command-center",
+  "description": "Water Gym accent layer for Marina and the first Sprites Gym roster.",
+  "tokens": {
+    "surface": "#0a1628",
+    "surfaceRaised": "#0d2b45",
+    "border": "#1a4a6b",
+    "accent": "#ffd700",
+    "accentAlt": "#00e5ff",
+    "typeAccent": "#00bcd4",
+    "text": "#e0f7ff",
+    "textMuted": "#7aa8c4"
+  },
+  "assets": {
+    "logo": "installer/assets/sprites-gym-logo.png",
+    "logoWithName": "installer/assets/sprites-gym-logo-name.png",
+    "icon": "installer/assets/sprites-gym.ico"
+  }
+}

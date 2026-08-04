@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Sprites Gym — AI Agent Teams</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/sprites.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="pixel-nav" id="main-nav">
+    <div class="nav-brand">
+      <span class="nav-brand-text">SPRITES GYM</span>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu">▼</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#gym-map">Map</a></li>
+      <li><a href="#water-gym">The Water Gym</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#pricing">Badges</a></li>
+      <li><a href="#pricing" class="nav-cta">Subscribe</a></li>
+    </ul>
+  </nav>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 1 — HERO
+  ═══════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="scanlines"></div>
+    <div class="pixel-grid-bg"></div>
+    <div class="hero-content">
+      <div class="hero-badge-row">
+        <span class="pixel-badge water">WATER</span>
+        <span class="hero-gym-num">THE WATER GYM #1</span>
+        <span class="pixel-badge available">AVAILABLE NOW</span>
+      </div>
+      <h1 class="hero-title">THE SPRITES<br>GYM</h1>
+      <div class="marina-slugline">Digital Assistants that Optimize your life.</div>
+      <p class="hero-sub">Install Your AI Team.<br>Choose Your Specialty.</p>
+      <div class="hero-ctas">
+        <a href="#gym-map" class="pixel-btn primary">▶ CHOOSE YOUR GYM</a>
+        <a href="#water-gym" class="pixel-btn secondary">THE WATER GYM ↓</a>
+      </div>
+    </div>
+    <img src="images/logo.png" alt="Sprites Gym logo" class="hero-header-logo">
+    <div class="hero-sprite-area">
+      <div class="sprite-wrap marina-hero">
+        <img src="images/marina.png" alt="Marina, Sprite Trainer" class="marina-hero-image" id="marina-hero-image">
+        <div class="sprite-label">MARINA</div>
+        <div class="sprite-title">SPRITE TRAINER</div>
+      </div>
+    </div>
+    <div class="marina-intro-overlay" id="marina-intro" aria-live="polite">
+      <div class="marina-intro-character">
+        <img src="images/Marina_Talking_statement.png" alt="Marina speaking" class="marina-intro-image" id="marina-intro-image">
+      </div>
+      <div class="dialogue-box marina-intro-dialogue" id="marina-intro-dialogue">
+        <span class="dialogue-text" id="marina-intro-text"></span>
+        <div class="marina-intro-controls">
+          <button class="pixel-btn secondary marina-intro-skip" id="marina-intro-skip" type="button">SKIP</button>
+          <div class="marina-intro-next-wrap">
+            <span class="marina-intro-speaker" id="marina-intro-speaker">- Marina</span>
+            <button class="pixel-btn primary marina-intro-ok" id="marina-intro-next" type="button">OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 2 — WHAT IS THIS
+  ═══════════════════════════════════════ -->
+  <section class="what-is section-pad" id="what-is">
+    <div class="container">
+      <h2 class="section-title">WHAT IS THE SPRITES GYM?</h2>
+      <div class="sprite-flowchart" aria-label="Sprites Gym quick flow">
+        <div class="flow-step">
+          <div class="flow-step-num">01</div>
+          <div class="flow-step-title">DOWNLOAD SPRITES GYM</div>
+          <p class="flow-step-desc">Install your sprite package and open your command center.</p>
+        </div>
+        <div class="flow-arrow">▶</div>
+        <div class="flow-step">
+          <div class="flow-step-num">02</div>
+          <div class="flow-step-title">PLUG IN YOUR INFORMATION</div>
+          <p class="flow-step-desc">Connect your provider, socials, and workspace data.</p>
+        </div>
+        <div class="flow-arrow">▶</div>
+        <div class="flow-step">
+          <div class="flow-step-num">03</div>
+          <div class="flow-step-title">WAKE UP YOUR AI SPRITES</div>
+          <p class="flow-step-desc">Assign tasks and let your squad run workflows for you.</p>
+        </div>
+      </div>
+
+      <div class="task-scene">
+        <img src="images/Waveform_At_Task.png" alt="Waveform handling inbox cleanup tasks" class="task-scene-image task-scene-left">
+        <div class="task-scene-copy">
+          <h3 class="task-scene-title">EXAMPLE TASK: GIVEN TO WAVEFORM</h3>
+          <p class="task-scene-desc">Go through my emails and get rid of all the spam!</p>
+        </div>
+        <div class="task-scene-image-wrap eating-mail-shot">
+          <img src="images/Waveform_Eats_Mail.png" alt="Waveform eating spam mail" class="task-scene-image task-scene-right">
+        </div>
+      </div>
+
+      <!-- ABILITY BUBBLES -->
+      <div class="ability-bubbles-container">
+        <div class="ability-bubble bubble-top-left">Automatic Scheduled Posting to your Social Media</div>
+        <div class="ability-bubble bubble-top-right">Analyze Blog Posts to Optimize for SEO</div>
+        <div class="ability-bubble bubble-left">Sort Photos</div>
+        <div class="ability-bubble bubble-right">Generate Video Scripts</div>
+        <div class="ability-bubble bubble-bottom-left">Organize email inbox sorting for business leads</div>
+        <div class="ability-bubble bubble-bottom-right">Make nightly report listing trends in my product / brands niche</div>
+      </div>
+
+      <div class="key-points">
+        <div class="key-point">
+          <div class="kp-icon">🔑</div>
+          <div class="kp-label">BYOK</div>
+          <div class="kp-desc">Use your own API keys. OpenAI, Anthropic, Gemini, or local models.</div>
+        </div>
+        <div class="key-point">
+          <div class="kp-icon">📦</div>
+          <div class="kp-label">MODULAR</div>
+          <div class="kp-desc">Each gym is an independent installable package.</div>
+        </div>
+        <div class="key-point">
+          <div class="kp-icon">🤝</div>
+          <div class="kp-label">COLLABORATIVE</div>
+          <div class="kp-desc">Sprites work together, critique each other, and produce better output.</div>
+        </div>
+        <div class="key-point">
+          <div class="kp-icon">⬆️</div>
+          <div class="kp-label">UPDATABLE</div>
+          <div class="kp-desc">Gyms receive patches, new sprites, and workflow upgrades over time.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 3 — GYM MAP
+  ═══════════════════════════════════════ -->
+  <section class="gym-map-section section-pad" id="gym-map">
+    <div class="container">
+      <h2 class="section-title">THE GYM MAP</h2>
+      <p class="section-sub">Your journey begins here. More gyms unlock as the ecosystem grows.</p>
+      <div class="gym-map-grid">
+
+        <!-- GYM 1 — WATER (AVAILABLE) -->
+        <a href="#water-gym" class="gym-slot available" id="gym-water">
+          <div class="gym-slot-inner">
+            <div class="gym-type-badge water">WATER</div>
+            <img src="images/marina.png" alt="Marina, Sprite Trainer" class="gym-map-sprite gym-map-image">
+            <div class="gym-slot-name">THE WATER GYM</div>
+            <div class="gym-slot-num">#1</div>
+            <div class="gym-slot-status available-tag">▶ AVAILABLE</div>
+          </div>
+        </a>
+
+        <!-- GYM 2 — FIRE (LOCKED) -->
+        <div class="gym-slot locked" data-type="fire" data-hint="Fueled by ambition. Forged in automation.">
+          <div class="gym-slot-inner">
+            <div class="gym-type-badge fire">FIRE</div>
+            <div class="gym-slot-sprite-placeholder">???</div>
+            <div class="gym-slot-name">??? GYM</div>
+            <div class="gym-slot-num">#2</div>
+            <div class="gym-slot-status locked-tag">🔒 COMING SOON</div>
+          </div>
+          <div class="gym-tooltip">Fueled by ambition. Forged in automation.</div>
+        </div>
+
+        <!-- GYM 3 — ELECTRIC (LOCKED) -->
+        <div class="gym-slot locked" data-type="electric" data-hint="Speed, precision, and shock-value clarity.">
+          <div class="gym-slot-inner">
+            <div class="gym-type-badge electric">ELECTRIC</div>
+            <div class="gym-slot-sprite-placeholder">???</div>
+            <div class="gym-slot-name">??? GYM</div>
+            <div class="gym-slot-num">#3</div>
+            <div class="gym-slot-status locked-tag">🔒 COMING SOON</div>
+          </div>
+          <div class="gym-tooltip">Speed, precision, and shock-value clarity.</div>
+        </div>
+
+        <!-- GYM 4 — GRASS (LOCKED) -->
+        <div class="gym-slot locked" data-type="grass" data-hint="Growth, roots, and long-term strategy.">
+          <div class="gym-slot-inner">
+            <div class="gym-type-badge grass">GRASS</div>
+            <div class="gym-slot-sprite-placeholder">???</div>
+            <div class="gym-slot-name">??? GYM</div>
+            <div class="gym-slot-num">#4</div>
+            <div class="gym-slot-status locked-tag">🔒 COMING SOON</div>
+          </div>
+          <div class="gym-tooltip">Growth, roots, and long-term strategy.</div>
+        </div>
+
+        <!-- GYM 5 — PSYCHIC (LOCKED) -->
+        <div class="gym-slot locked" data-type="psychic" data-hint="Pattern recognition. Insight at scale.">
+          <div class="gym-slot-inner">
+            <div class="gym-type-badge psychic">PSYCHIC</div>
+            <div class="gym-slot-sprite-placeholder">???</div>
+            <div class="gym-slot-name">??? GYM</div>
+            <div class="gym-slot-num">#5</div>
+            <div class="gym-slot-status locked-tag">🔒 COMING SOON</div>
+          </div>
+          <div class="gym-tooltip">Pattern recognition. Insight at scale.</div>
+        </div>
+
+        <!-- GYM 6 — DARK (LOCKED) -->
+        <div class="gym-slot locked" data-type="dark" data-hint="Competitive intelligence and counterplay.">
+          <div class="gym-slot-inner">
+            <div class="gym-type-badge dark">DARK</div>
+            <div class="gym-slot-sprite-placeholder">???</div>
+            <div class="gym-slot-name">??? GYM</div>
+            <div class="gym-slot-num">#6</div>
+            <div class="gym-slot-status locked-tag">🔒 COMING SOON</div>
+          </div>
+          <div class="gym-tooltip">Competitive intelligence and counterplay.</div>
+        </div>
+
+        <!-- GYM 7 — STEEL (LOCKED) -->
+        <div class="gym-slot locked" data-type="steel" data-hint="Infrastructure, systems, and cold precision.">
+          <div class="gym-slot-inner">
+            <div class="gym-type-badge steel">STEEL</div>
+            <div class="gym-slot-sprite-placeholder">???</div>
+            <div class="gym-slot-name">??? GYM</div>
+            <div class="gym-slot-num">#7</div>
+            <div class="gym-slot-status locked-tag">🔒 COMING SOON</div>
+          </div>
+          <div class="gym-tooltip">Infrastructure, systems, and cold precision.</div>
+        </div>
+
+        <!-- GYM 8 — DRAGON (LOCKED) -->
+        <div class="gym-slot locked" data-type="dragon" data-hint="Elite. Enterprise. End-to-end domination.">
+          <div class="gym-slot-inner">
+            <div class="gym-type-badge dragon">DRAGON</div>
+            <div class="gym-slot-sprite-placeholder">???</div>
+            <div class="gym-slot-name">??? GYM</div>
+            <div class="gym-slot-num">#8</div>
+            <div class="gym-slot-status locked-tag">🔒 COMING SOON</div>
+          </div>
+          <div class="gym-tooltip">Elite. Enterprise. End-to-end domination.</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 4 — WATER GYM INTRO
+  ═══════════════════════════════════════ -->
+  <section class="water-gym-intro section-pad water-theme" id="water-gym">
+    <div class="container">
+      <div class="gym-header-row">
+        <img src="images/tsunami_badge.png" alt="Tsunami badge for The Water Gym" class="gym-badge-icon gym-badge-image">
+        <div class="gym-header-text">
+          <div class="gym-number-tag">GYM #1</div>
+          <h2 class="gym-title">THE WATER GYM</h2>
+          <p class="gym-tagline">AI Content Department.<br>Content Creation · SEO · Growth · Repurposing.</p>
+        </div>
+      </div>
+      <div class="gym-theme-tags">
+        <span class="theme-tag">FLOW</span>
+        <span class="theme-tag">ADAPTABILITY</span>
+        <span class="theme-tag">DISTRIBUTION</span>
+        <span class="theme-tag">MOMENTUM</span>
+        <span class="theme-tag">VIRALITY</span>
+        <span class="theme-tag">SOCIAL INTELLIGENCE</span>
+      </div>
+      <div class="dialogue-box water-dialogue" id="water-intro-dialogue">
+        <span class="dialogue-text" data-text="The Water Gym is the Sprites Gym's coordinated AI content department. Six specialized sprites plus Marina - each handling a different stage of your content pipeline."></span>
+        <span class="blink-cursor">▼</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 5 — MEET YOUR TEAM
+  ═══════════════════════════════════════ -->
+  <section class="team-section section-pad water-theme" id="team">
+    <div class="container">
+      <h2 class="section-title">MEET YOUR TEAM</h2>
+      <p class="section-sub">Click a sprite to see their full profile.</p>
+      <div class="sprite-roster">
+
+        <!-- MARINA — SPRITE TRAINER -->
+        <div class="sprite-card leader-card" data-sprite="marina">
+          <div class="card-front">
+            <div class="card-leader-tag">SPRITE TRAINER</div>
+            <div class="marina-portrait-frame">
+              <img src="images/Marina_smirk.png" alt="Marina portrait" class="card-sprite marina-card-image" id="marina-card-image" data-default-src="images/Marina_smirk.png" data-hover-src="images/Marina_Talking_Question.png">
+            </div>
+            <div class="sprite-name">MARINA</div>
+            <div class="sprite-specialty">Command &amp; Coordination</div>
+            <div class="sprite-stats">
+              <div class="stat-row"><span class="stat-label">STR</span><div class="stat-bar"><div class="stat-fill" data-fill="95" style="--fill-color: #ffd700;"></div></div></div>
+              <div class="stat-row"><span class="stat-label">SPD</span><div class="stat-bar"><div class="stat-fill" data-fill="88" style="--fill-color: #ffd700;"></div></div></div>
+              <div class="stat-row"><span class="stat-label">WIS</span><div class="stat-bar"><div class="stat-fill" data-fill="99" style="--fill-color: #ffd700;"></div></div></div>
+            </div>
+          </div>
+          <div class="card-back">
+            <div class="sprite-name-back">MARINA</div>
+            <div class="sprite-quote">"Every wave starts somewhere. I decide where."</div>
+            <div class="sprite-abilities-label">ABILITIES</div>
+            <ul class="sprite-ability-list">
+              <li>Delegates tasks across all sprites</li>
+              <li>Maintains workflow coherence</li>
+              <li>Final quality gate on all outputs</li>
+              <li>Coordinates review loops</li>
+            </ul>
+            <div class="card-flip-hint">[ CLICK TO FLIP ]</div>
+          </div>
+        </div>
+
+        <!-- RIPPLE -->
+        <div class="sprite-card" data-sprite="ripple">
+          <div class="card-front">
+            <img src="images/Ripple.png" alt="Ripple portrait" class="card-sprite sprite-card-image" id="ripple-card-image" data-default-src="images/Ripple.png" data-hover-src="images/ripple_talking_cute.jpg">
+            <div class="sprite-name">RIPPLE</div>
+            <div class="sprite-specialty">Trend Monitor</div>
+            <div class="sprite-stats">
+              <div class="stat-row"><span class="stat-label">SPD</span><div class="stat-bar"><div class="stat-fill" data-fill="95" style="--fill-color: #00e5ff;"></div></div></div>
+              <div class="stat-row"><span class="stat-label">AWR</span><div class="stat-bar"><div class="stat-fill" data-fill="90" style="--fill-color: #00e5ff;"></div></div></div>
+              <div class="stat-row"><span class="stat-label">RCH</span><div class="stat-bar"><div class="stat-fill" data-fill="80" style="--fill-color: #00e5ff;"></div></div></div>
+            </div>
+          </div>
+          <div class="card-back">
+            <div class="sprite-name-back">RIPPLE</div>
+            <div class="sprite-quote">"I feel trends before they break the surface."</div>
+            <div class="sprite-abilities-label">ABILITIES</div>
+            <ul class="sprite-ability-list">
+              <li>Real-time topic trend analysis</li>
+              <li>Viral pattern detection</li>
+              <li>Platform-specific timing intelligence</li>
+              <li>Feeds insights to the full team</li>
+            </ul>
+            <div class="card-flip-hint">[ CLICK TO FLIP ]</div>
+          </div>
+        </div>
+
+        <!-- TIDEBYTE -->
+        <div class="sprite-card" data-sprite="tidebyte">
+          <div class="card-front">
+              <img src="images/Tidebyte_funny.png" alt="Tidebyte portrait" class="card-sprite sprite-card-image" id="tidbyte-card-image" data-default-src="images/Tidebyte_funny.png" data-hover-src="images/tidebyte_falls_over.png">
+            <div class="sprite-name">TIDEBYTE</div>
+            <div class="sprite-specialty">SEO Optimizer</div>
+            <div class="sprite-stats">
+              <div class="stat-row"><span class="stat-label">SEO</span><div class="stat-bar"><div class="stat-fill" data-fill="97" style="--fill-color: #ffd700;"></div></div></div>
+              <div class="stat-row"><span class="stat-label">ANA</span><div class="stat-bar"><div class="stat-fill" data-fill="85" style="--fill-color: #ffd700;"></div></div></div>
+              <div class="stat-row"><span class="stat-label">DEP</span><div class="stat-bar"><div class="stat-fill" data-fill="92" style="--fill-color: #ffd700;"></div></div></div>
+            </div>
+          </div>
+          <div class="card-back">
+            <div class="sprite-name-back">TIDEBYTE</div>
+            <div class="sprite-quote">"The algorithm has no secrets from me."</div>
+            <div class="sprite-abilities-label">ABILITIES</div>
+            <ul class="sprite-ability-list">
+              <li>Keyword research &amp; intent mapping</li>
+              <li>Title &amp; meta description generation</li>
+              <li>On-page SEO structuring</li>
+              <li>Slug &amp; heading optimization</li>
+            </ul>
+            <div class="card-flip-hint">[ CLICK TO FLIP ]</div>
+          </div>
+        </div>
+
+        <!-- SQUINK -->
+        <div class="sprite-card" data-sprite="squink">
+          <div class="card-front">
+            <img src="images/squink.png" alt="Squink portrait" class="card-sprite sprite-card-image" id="squink-card-image" data-default-src="images/squink.png" data-hover-src="images/Squink%20writes.png">
+            <div class="sprite-name">SQUINK</div>
+            <div class="sprite-specialty">Writer</div>
+            <div class="sprite-stats">
+              <div class="stat-row"><span class="stat-label">WRT</span><div class="stat-bar"><div class="stat-fill" data-fill="93" style="--fill-color: #7c4dff;"></div></div></div>
+              <div class="stat-row"><span class="stat-label">TON</span><div class="stat-bar"><div class="stat-fill" data-fill="89" style="--fill-color: #7c4dff;"></div></div></div>
+              <div class="stat-row"><span class="stat-label">CRE</span><div class="stat-bar"><div class="stat-fill" data-fill="96" style="--fill-color: #7c4dff;"></div></div></div>
+            </div>
+          </div>
+          <div class="card-back">
+            <div class="sprite-name-back">SQUINK</div>
+            <div class="sprite-quote">"Words flow like water. I just direct the current."</div>
+            <div class="sprite-abilities-label">ABILITIES</div>
+            <ul class="sprite-ability-list">
+              <li>Long-form blog &amp; article drafting</li>
+              <li>Hook &amp; intro generation</li>
+              <li>Tone matching to brand voice</li>
+              <li>Caption &amp; short-form writing</li>
+            </ul>
+            <div class="card-flip-hint">[ CLICK TO FLIP ]</div>
+          </div>
+        </div>
+
+        <!-- WAVEFORM -->
+        <div class="sprite-card" data-sprite="waveform">
+          <div class="card-front">
+            <img src="images/Waveform.png" alt="Waveform portrait" class="card-sprite sprite-card-image">
+            <div class="sprite-name">WAVEFORM</div>
+            <div class="sprite-specialty">Content Repurposer</div>
+            <div class="sprite-stats">
+              <div class="stat-row"><span class="stat-label">ADP</span><div class="stat-bar"><div class="stat-fill" data-fill="94" style="--fill-color: #00bcd4;"></div></div></div>
+              <div class="stat-row"><span class="stat-label">RCH</span><div class="stat-bar"><div class="stat-fill" data-fill="91" style="--fill-color: #00bcd4;"></div></div></div>
+              <div class="stat-row"><span class="stat-label">SPD</span><div class="stat-bar"><div class="stat-fill" data-fill="86" style="--fill-color: #00bcd4;"></div></div></div>
+            </div>
+          </div>
+          <div class="card-back">
+            <div class="sprite-name-back">WAVEFORM</div>
+            <div class="sprite-quote">"One piece of content. Infinite reach."</div>
+            <div class="sprite-abilities-label">ABILITIES</div>
+            <ul class="sprite-ability-list">
+              <li>Blog → Shorts → Threads → Reels</li>
+              <li>Platform-specific reformatting</li>
+              <li>Clip &amp; highlight extraction</li>
+              <li>Cross-platform campaign packs</li>
+            </ul>
+            <div class="card-flip-hint">[ CLICK TO FLIP ]</div>
+          </div>
+        </div>
+
+        <!-- TORRENTAIL -->
+        <div class="sprite-card" data-sprite="torrentail">
+          <div class="card-front">
+            <img src="images/torrentail.png" alt="Torrentail portrait" class="card-sprite sprite-card-image" id="torrentail-card-image" data-default-src="images/torrentail.png" data-hover-src="images/torrentail_smash.png">
+            <div class="sprite-name">TORRENTAIL</div>
+            <div class="sprite-specialty">Analytics</div>
+            <div class="sprite-stats">
+              <div class="stat-row"><span class="stat-label">ANA</span><div class="stat-bar"><div class="stat-fill" data-fill="98" style="--fill-color: #00e5ff;"></div></div></div>
+              <div class="stat-row"><span class="stat-label">PRE</span><div class="stat-bar"><div class="stat-fill" data-fill="92" style="--fill-color: #00e5ff;"></div></div></div>
+              <div class="stat-row"><span class="stat-label">INS</span><div class="stat-bar"><div class="stat-fill" data-fill="87" style="--fill-color: #00e5ff;"></div></div></div>
+            </div>
+          </div>
+          <div class="card-back">
+            <div class="sprite-name-back">TORRENTAIL</div>
+            <div class="sprite-quote">"Numbers don't lie. They just need translating."</div>
+            <div class="sprite-abilities-label">ABILITIES</div>
+            <ul class="sprite-ability-list">
+              <li>Post performance analysis</li>
+              <li>Audience growth metrics</li>
+              <li>Engagement pattern detection</li>
+              <li>Optimization recommendations</li>
+            </ul>
+            <div class="card-flip-hint">[ CLICK TO FLIP ]</div>
+          </div>
+        </div>
+
+        <!-- CASCADEX -->
+        <div class="sprite-card" data-sprite="cascadex">
+          <div class="card-front">
+            <img src="images/cascade.png" alt="Cascadex portrait" class="card-sprite sprite-card-image" id="cascadex-card-image" data-default-src="images/cascade.png" data-hover-src="images/cascade_laugh.png">
+            <div class="sprite-name">CASCADEX</div>
+            <div class="sprite-specialty">Social Media Manager</div>
+            <div class="sprite-stats">
+              <div class="stat-row"><span class="stat-label">ORG</span><div class="stat-bar"><div class="stat-fill" data-fill="96" style="--fill-color: #b39ddb;"></div></div></div>
+              <div class="stat-row"><span class="stat-label">TIM</span><div class="stat-bar"><div class="stat-fill" data-fill="99" style="--fill-color: #b39ddb;"></div></div></div>
+              <div class="stat-row"><span class="stat-label">AUT</span><div class="stat-bar"><div class="stat-fill" data-fill="88" style="--fill-color: #b39ddb;"></div></div></div>
+            </div>
+          </div>
+          <div class="card-back">
+            <div class="sprite-name-back">CASCADEX</div>
+            <div class="sprite-quote">"Right content. Right platform. Right moment."</div>
+            <div class="sprite-abilities-label">ABILITIES</div>
+            <ul class="sprite-ability-list">
+              <li>Multi-platform post scheduling</li>
+              <li>Algorithm-timed publishing</li>
+              <li>Content calendar management</li>
+              <li>Campaign queue coordination</li>
+            </ul>
+            <div class="card-flip-hint">[ CLICK TO FLIP ]</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 6 — ABILITIES (WORKFLOWS)
+  ═══════════════════════════════════════ -->
+  <section class="abilities-section section-pad water-theme" id="abilities">
+    <div class="container">
+      <h2 class="section-title">ABILITIES</h2>
+      <p class="section-sub">Preset workflows. Ask once. The team handles the rest.</p>
+      <div class="abilities-grid">
+        <div class="ability-card">
+          <div class="ability-icon">📝</div>
+          <div class="ability-name">GENERATE<br>BLOG POST</div>
+          <div class="ability-desc">SEO-optimized long-form post with title options, meta, slug, and social snippets.</div>
+          <div class="ability-sprites">Ripple · Tidebyte · Squink · Marina</div>
+        </div>
+        <div class="ability-card">
+          <div class="ability-icon">📅</div>
+          <div class="ability-name">SCHEDULE<br>SOCIAL POST</div>
+          <div class="ability-desc">Platform-adapted posts with captions, hashtags, and scheduled publishing across 6 platforms.</div>
+          <div class="ability-sprites">Squink · Cascadex · Torrentail</div>
+        </div>
+        <div class="ability-card">
+          <div class="ability-icon">♻️</div>
+          <div class="ability-name">REPURPOSE<br>CONTENT</div>
+          <div class="ability-desc">Turn one piece of content into a full cross-platform campaign pack.</div>
+          <div class="ability-sprites">Waveform · Squink · Cascadex</div>
+        </div>
+        <div class="ability-card">
+          <div class="ability-icon">🎬</div>
+          <div class="ability-name">SHORTS<br>SCRIPT</div>
+          <div class="ability-desc">Hook-first short-form video scripts for YouTube Shorts, TikTok, and Reels.</div>
+          <div class="ability-sprites">Ripple · Squink · Waveform</div>
+        </div>
+        <div class="ability-card">
+          <div class="ability-icon">🗓️</div>
+          <div class="ability-name">CONTENT<br>CALENDAR</div>
+          <div class="ability-desc">Full monthly content plan with topics, platforms, and posting schedule.</div>
+          <div class="ability-sprites">Ripple · Cascadex · Marina</div>
+        </div>
+        <div class="ability-card">
+          <div class="ability-icon">🔍</div>
+          <div class="ability-name">SEO<br>OPTIMIZE</div>
+          <div class="ability-desc">Audit and upgrade an existing article for search intent, keywords, and structure.</div>
+          <div class="ability-sprites">Tidebyte · Squink · Marina</div>
+        </div>
+        <div class="ability-card">
+          <div class="ability-icon">▶️</div>
+          <div class="ability-name">YOUTUBE<br>DESCRIPTION</div>
+          <div class="ability-desc">SEO-rich video descriptions with chapters, CTAs, and keyword placement.</div>
+          <div class="ability-sprites">Tidebyte · Squink</div>
+        </div>
+        <div class="ability-card">
+          <div class="ability-icon">📸</div>
+          <div class="ability-name">INSTAGRAM<br>CAPTION</div>
+          <div class="ability-desc">Engagement-optimized captions with hashtag strategy for Instagram posts and Reels.</div>
+          <div class="ability-sprites">Squink · Ripple · Cascadex</div>
+        </div>
+        <div class="ability-card">
+          <div class="ability-icon">📊</div>
+          <div class="ability-name">ANALYZE<br>PERFORMANCE</div>
+          <div class="ability-desc">Post-performance review with insights and recommended next steps.</div>
+          <div class="ability-sprites">Torrentail · Ripple · Marina</div>
+        </div>
+        <div class="ability-card">
+          <div class="ability-icon">🚀</div>
+          <div class="ability-name">CAMPAIGN<br>PACK</div>
+          <div class="ability-desc">End-to-end multi-platform campaign: blog, social, shorts, email, and schedule.</div>
+          <div class="ability-sprites">Full Team · Marina</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 7 — BATTLE STATS
+  ═══════════════════════════════════════ -->
+  <section class="stats-section section-pad" id="features">
+    <div class="container">
+      <h2 class="section-title">BATTLE STATS</h2>
+      <p class="section-sub">What makes the Sprites Gym different.</p>
+      <div class="battle-stats-grid">
+        <div class="battle-stat fade-in">
+          <div class="bs-icon">🔑</div>
+          <div class="bs-title">BYOK SUPPORT</div>
+          <div class="bs-bar-wrap"><div class="bs-bar" data-fill="100"></div></div>
+          <div class="bs-desc">Connect OpenAI, Anthropic, Gemini, OpenRouter, or local models. No vendor lock-in.</div>
+        </div>
+        <div class="battle-stat fade-in">
+          <div class="bs-icon">🔀</div>
+          <div class="bs-title">MULTI-PROVIDER ROUTING</div>
+          <div class="bs-bar-wrap"><div class="bs-bar" data-fill="90"></div></div>
+          <div class="bs-desc">Assign different AI providers per sprite. Optimize for speed, cost, and quality.</div>
+        </div>
+        <div class="battle-stat fade-in">
+          <div class="bs-icon">⬆️</div>
+          <div class="bs-title">AUTO-UPDATE SYSTEM</div>
+          <div class="bs-bar-wrap"><div class="bs-bar" data-fill="85"></div></div>
+          <div class="bs-desc">Receive new sprites, workflow patches, and improvements without reinstalling.</div>
+        </div>
+        <div class="battle-stat fade-in">
+          <div class="bs-icon">📱</div>
+          <div class="bs-title">SOCIAL INTEGRATION</div>
+          <div class="bs-bar-wrap"><div class="bs-bar" data-fill="88"></div></div>
+          <div class="bs-desc">Connect Instagram, TikTok, YouTube, X, Facebook, and Reddit for direct publishing.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 8 — PRICING
+  ═══════════════════════════════════════ -->
+  <section class="pricing-section section-pad water-theme" id="pricing">
+    <div class="container">
+      <h2 class="section-title">CHOOSE YOUR BADGE</h2>
+      <p class="section-sub">All plans include the Sprites Gym sprite package. Cancel anytime.</p>
+      <div class="pricing-grid">
+
+        <!-- SPLASH BADGE -->
+        <div class="pricing-card">
+          <div class="badge-display splash-badge"></div>
+          <div class="badge-name">FREE BADGE</div>
+          <div class="badge-price">FREE</div>
+          <ul class="badge-features">
+            <li>✓ Full roster: 6 sprites + Marina</li>
+            <li>✓ 15 workflow runs/month</li>
+            <li>✓ All 10 abilities unlocked</li>
+            <li>✓ BYOK (multi-provider)</li>
+            <li>✓ Email support</li>
+            <li>✓ Command Center</li>
+            <li>✓ Social media integration (6 platforms)</li>
+            <li class="dim">✗ Multi-gym access</li>
+          </ul>
+          <a href="#install" class="pixel-btn secondary">
+            ▶ CLAIM FREE BADGE
+          </a>
+        </div>
+
+        <!-- CASCADE BADGE (FEATURED) -->
+        <div class="pricing-card featured">
+          <div class="featured-tag">★ MOST POPULAR</div>
+          <div class="badge-display cascade-badge"></div>
+          <div class="badge-name">CASCADE BADGE</div>
+          <div class="badge-price">$30<span>/mo</span></div>
+          <ul class="badge-features">
+            <li>✓ Full roster: 6 sprites + Marina</li>
+            <li>✓ 200 workflow runs/month</li>
+            <li>✓ All 10 abilities unlocked</li>
+            <li>✓ BYOK (multi-provider)</li>
+            <li>✓ Social media integration (6 platforms)</li>
+            <li>✓ Auto-update system</li>
+            <li>✓ Priority support</li>
+            <li>✓ Command Center</li>
+          </ul>
+          <a href="#" class="pixel-btn primary subscribe-btn" data-plan="cascade">
+            ▶ GET CASCADE BADGE
+          </a>
+        </div>
+
+        <!-- TSUNAMI BADGE -->
+        <div class="pricing-card">
+          <div class="badge-display tsunami-badge"></div>
+          <div class="badge-name">TSUNAMI BADGE</div>
+          <div class="badge-price">$199<span>/mo</span></div>
+          <ul class="badge-features">
+            <li>✓ Full roster: 6 sprites + Marina</li>
+            <li>✓ Unlimited workflow runs</li>
+            <li>✓ All 10 abilities unlocked</li>
+            <li>✓ BYOK (all providers)</li>
+            <li>✓ Social media integration (6 platforms)</li>
+            <li>✓ Command Center UI</li>
+            <li>✓ Multi-gym ready (future gyms)</li>
+            <li>✓ Team access + priority updates</li>
+          </ul>
+          <a href="#" class="pixel-btn secondary subscribe-btn" data-plan="tsunami">
+            ▶ GET TSUNAMI BADGE
+          </a>
+          <div class="tsunami-note">★ Priority access to all future gym launches</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 9 — HOW TO INSTALL
+  ═══════════════════════════════════════ -->
+  <section class="install-section section-pad" id="install">
+    <div class="container">
+      <h2 class="section-title">HOW TO START</h2>
+      <div class="tutorial-panel">
+        <div class="tutorial-step">
+          <div class="step-num">01</div>
+          <div class="step-icon">📦</div>
+          <div class="step-title">INSTALL THE GYM</div>
+          <div class="step-desc">Download your Sprites Gym sprite package after subscribing. One-command installer. No dependencies.</div>
+        </div>
+        <div class="step-arrow">▶</div>
+        <div class="tutorial-step">
+          <div class="step-num">02</div>
+          <div class="step-icon">🔑</div>
+          <div class="step-title">CONNECT YOUR KEY</div>
+          <div class="step-desc">Paste your API key from any supported provider. The setup wizard walks you through it.</div>
+        </div>
+        <div class="step-arrow">▶</div>
+        <div class="tutorial-step">
+          <div class="step-num">03</div>
+          <div class="step-icon">⚙️</div>
+          <div class="step-title">SELECT PROVIDER</div>
+          <div class="step-desc">Pick your AI provider or assign different models per sprite. One provider works fine too.</div>
+        </div>
+        <div class="step-arrow">▶</div>
+        <div class="tutorial-step">
+          <div class="step-num">04</div>
+          <div class="step-icon">▶️</div>
+          <div class="step-title">GO</div>
+          <div class="step-desc">Launch an ability from the Command Center. Your team gets to work immediately.</div>
+        </div>
+      </div>
+      <div class="provider-logos">
+        <span class="provider-tag">OpenAI</span>
+        <span class="provider-tag">Anthropic</span>
+        <span class="provider-tag">Gemini</span>
+        <span class="provider-tag">OpenRouter</span>
+        <span class="provider-tag">Local Models</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 10 — ECOSYSTEM CTA / NOTIFY
+  ═══════════════════════════════════════ -->
+  <section class="ecosystem-cta section-pad" id="ecosystem">
+    <div class="container">
+      <div class="eco-cta-inner">
+        <h2 class="eco-title">THE SPRITES GYM<br>IS JUST THE BEGINNING.</h2>
+        <p class="eco-sub">Seven more gyms are in development. Each one a specialized AI department for a different domain.</p>
+        <div class="locked-gym-tease">
+          <div class="tease-gym fire-tease">🔥</div>
+          <div class="tease-gym electric-tease">⚡</div>
+          <div class="tease-gym grass-tease">🌿</div>
+          <div class="tease-gym psychic-tease">🔮</div>
+          <div class="tease-gym dark-tease">🌑</div>
+          <div class="tease-gym steel-tease">⚙️</div>
+          <div class="tease-gym dragon-tease">🐉</div>
+        </div>
+        <p class="eco-notify-label">Get notified when the next gym opens:</p>
+        <form class="notify-form" id="notify-form">
+          <input type="email" class="pixel-input" placeholder="your@email.com" required>
+          <button type="submit" class="pixel-btn primary">NOTIFY ME</button>
+        </form>
+        <p class="notify-note">Tsunami Badge holders get priority launch access to all future gyms.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 11 — FINAL CTA
+  ═══════════════════════════════════════ -->
+  <section class="final-cta section-pad water-theme" id="final-cta">
+    <div class="container">
+      <div class="final-cta-inner">
+        <img src="images/marina.png" alt="Marina, Sprite Trainer" class="final-marina">
+        <div class="final-cta-text">
+          <h2 class="final-title">READY TO CHALLENGE<br>THE WATER GYM?</h2>
+          <div class="dialogue-box final-dialogue" id="final-dialogue">
+            <span class="dialogue-text" data-text="Marina is waiting. Your content team is assembled. All that's missing is you."></span>
+            <span class="blink-cursor">▼</span>
+          </div>
+          <a href="#pricing" class="pixel-btn primary large">▶ START YOUR SUBSCRIPTION</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="pixel-footer">
+    <div class="footer-border"></div>
+    <div class="container">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="Sprites Gym logo" class="brand-logo footer-brand-logo">
+        <span>THE SPRITES GYM ECOSYSTEM</span>
+      </div>
+      <div class="footer-tagline">Modular AI Agent Teams. Built for Builders.</div>
+      <div class="footer-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Contact</a>
+        <a href="#">Discord</a>
+      </div>
+      <div class="footer-copy">© 2025 The Sprites Gym Ecosystem. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="js/stripe-config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

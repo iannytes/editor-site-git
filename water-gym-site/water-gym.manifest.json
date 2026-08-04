@@ -1,0 +1,98 @@
+{
+  "schema": "water-gym.manifest.v0",
+  "gym": {
+    "id": "water-gym",
+    "name": "Sprites Gym",
+    "version": "0.1.0",
+    "leaderAgentId": "water-marina",
+    "description": "A BYOK AI content department coordinated by Marina and six specialist sprite-agents."
+  },
+  "defaults": {
+    "provider": "openai-codex",
+    "model": "openai-codex/gpt-5.5",
+    "singleModelMode": true,
+    "workspaceRoot": "~/.openclaw"
+  },
+  "agents": [
+    {
+      "id": "water-marina",
+      "name": "Marina",
+      "emoji": "🌊",
+      "role": "Gym Leader / Workflow Coordinator",
+      "specialty": "Command & Coordination",
+      "quote": "Every wave starts somewhere. I decide where.",
+      "workspace": "~/.openclaw/workspace-water-marina",
+      "notes": [
+        "Delegates tasks across all Sprites Gym sprites.",
+        "Maintains workflow coherence and user approval gates.",
+        "Final quality gate on all outputs."
+      ]
+    },
+    {
+      "id": "water-ripple",
+      "name": "Ripple",
+      "emoji": "🫧",
+      "role": "Trend Monitor",
+      "specialty": "Real-time topic trends, viral pattern detection, platform timing intelligence",
+      "quote": "I feel trends before they break the surface.",
+      "workspace": "~/.openclaw/workspace-water-ripple"
+    },
+    {
+      "id": "water-tidebyte",
+      "name": "Tidebyte",
+      "emoji": "🔎",
+      "role": "SEO Optimizer",
+      "specialty": "Keyword research, intent mapping, metadata, headings, slugs",
+      "quote": "The algorithm has no secrets from me.",
+      "workspace": "~/.openclaw/workspace-water-tidebyte"
+    },
+    {
+      "id": "water-squink",
+      "name": "Squink",
+      "emoji": "🖋️",
+      "role": "Writer",
+      "specialty": "Long-form drafting, hooks, tone matching, captions, short-form writing",
+      "quote": "Words flow like water. I just direct the current.",
+      "workspace": "~/.openclaw/workspace-water-squink"
+    },
+    {
+      "id": "water-waveform",
+      "name": "Waveform",
+      "emoji": "🔁",
+      "role": "Content Repurposer",
+      "specialty": "Platform adaptation, content transformation, clip/highlight extraction, campaign packs",
+      "quote": "One piece of content. Infinite reach.",
+      "workspace": "~/.openclaw/workspace-water-waveform"
+    },
+    {
+      "id": "water-torrentail",
+      "name": "Torrentail",
+      "emoji": "📊",
+      "role": "Analytics Interpreter",
+      "specialty": "Post performance, audience growth, engagement patterns, optimization recommendations",
+      "quote": "Numbers don't lie. They just need translating.",
+      "workspace": "~/.openclaw/workspace-water-torrentail"
+    },
+    {
+      "id": "water-cascadex",
+      "name": "Cascadex",
+      "emoji": "🗓️",
+      "role": "Scheduler",
+      "specialty": "Calendar management, platform scheduling, campaign queue coordination, publishing windows",
+      "quote": "Right content. Right platform. Right moment.",
+      "workspace": "~/.openclaw/workspace-water-cascadex"
+    }
+  ],
+  "abilities": [
+    { "id": "generate-blog-post", "name": "Generate Blog Post", "agents": ["water-ripple", "water-tidebyte", "water-squink", "water-marina"] },
+    { "id": "schedule-social-post", "name": "Schedule Social Post", "agents": ["water-squink", "water-cascadex", "water-torrentail"] },
+    { "id": "repurpose-content", "name": "Repurpose Content", "agents": ["water-waveform", "water-squink", "water-cascadex"] },
+    { "id": "shorts-script", "name": "Shorts Script", "agents": ["water-ripple", "water-squink", "water-waveform"] },
+    { "id": "content-calendar", "name": "Content Calendar", "agents": ["water-ripple", "water-cascadex", "water-marina"] },
+    { "id": "seo-optimize", "name": "SEO Optimize", "agents": ["water-tidebyte", "water-squink", "water-marina"] },
+    { "id": "youtube-description", "name": "YouTube Description", "agents": ["water-tidebyte", "water-squink"] },
+    { "id": "instagram-caption", "name": "Instagram Caption", "agents": ["water-squink", "water-ripple", "water-cascadex"] },
+    { "id": "analyze-performance", "name": "Analyze Performance", "agents": ["water-torrentail", "water-ripple", "water-marina"] },
+    { "id": "campaign-pack", "name": "Campaign Pack", "agents": ["water-marina", "water-ripple", "water-tidebyte", "water-squink", "water-waveform", "water-torrentail", "water-cascadex"] }
+  ]
+}

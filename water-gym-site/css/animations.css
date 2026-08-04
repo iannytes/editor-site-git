@@ -1,0 +1,261 @@
+/* ═══════════════════════════════════════════
+   THE GYM ECOSYSTEM — animations.css
+═══════════════════════════════════════════ */
+
+/* ─── SCANLINES (GBA LCD effect) ─────────── */
+.scanlines {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 3px,
+    rgba(0, 0, 0, 0.12) 3px,
+    rgba(0, 0, 0, 0.12) 4px
+  );
+}
+
+/* ─── PIXEL GRID BG ──────────────────────── */
+.pixel-grid-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    linear-gradient(rgba(0,229,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,229,255,0.03) 1px, transparent 1px);
+  background-size: 24px 24px;
+  animation: grid-drift 20s linear infinite;
+}
+
+/* ─── SPRITE ANIMATIONS ──────────────────── */
+@keyframes sprite-idle {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-3px); }
+}
+
+@keyframes sprite-bounce {
+  0%  { transform: translateY(0px) scaleY(1); }
+  40% { transform: translateY(-8px) scaleY(1.05); }
+  70% { transform: translateY(0px) scaleY(0.95); }
+  100%{ transform: translateY(0px) scaleY(1); }
+}
+
+/* Final marina floats */
+.final-marina {
+  animation: sprite-idle 2s steps(2, end) infinite;
+}
+
+/* ─── BLINK ───────────────────────────────── */
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100%{ opacity: 0; }
+}
+
+/* ─── WATER GLOW ──────────────────────────── */
+@keyframes water-glow {
+  0%, 100% { box-shadow: 0 0 16px rgba(0, 229, 255, 0.3), inset 0 0 16px rgba(0, 229, 255, 0.05); }
+  50%       { box-shadow: 0 0 32px rgba(0, 229, 255, 0.55), inset 0 0 24px rgba(0, 229, 255, 0.1); }
+}
+
+/* ─── PULSE GLOW (AVAILABLE badge) ───────── */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 4px #4caf50; }
+  50%       { box-shadow: 0 0 14px #4caf50; }
+}
+
+/* ─── ANIMATED WATER WAVES (hero bg) ─────── */
+.hero::before,
+.hero::after {
+  content: '';
+  position: absolute;
+  left: -50%;
+  bottom: 0;
+  width: 200%;
+  height: 120px;
+  border-radius: 40% 60% 55% 45% / 40% 45% 55% 60%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero::before {
+  background: rgba(0, 188, 212, 0.07);
+  animation: wave-roll 8s linear infinite;
+}
+
+.hero::after {
+  background: rgba(0, 229, 255, 0.04);
+  animation: wave-roll 12s linear infinite reverse;
+  bottom: 20px;
+}
+
+@keyframes wave-roll {
+  0%   { transform: translateX(0) rotate(0deg); }
+  100% { transform: translateX(-50%) rotate(360deg); }
+}
+
+/* ─── GRID DRIFT ─────────────────────────── */
+@keyframes grid-drift {
+  0%   { background-position: 0 0; }
+  100% { background-position: 24px 24px; }
+}
+
+/* ─── TYPING CURSOR IN DIALOGUE ──────────── */
+@keyframes type-cursor {
+  0%, 49% { border-right-color: #383838; }
+  50%, 100%{ border-right-color: transparent; }
+}
+
+/* ─── BADGE SHIMMER ──────────────────────── */
+.cascade-badge {
+  animation: badge-shimmer 3s ease-in-out infinite;
+}
+
+@keyframes badge-shimmer {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(255,215,0,0.3);
+    filter: brightness(1);
+  }
+  50% {
+    box-shadow: 0 0 24px rgba(255,215,0,0.6);
+    filter: brightness(1.15);
+  }
+}
+
+/* ─── GYM WATER SLOT PULSE ───────────────── */
+.gym-slot.available .gym-type-badge.water {
+  animation: water-glow 2.5s ease-in-out infinite;
+}
+
+/* ─── LOCKED GYM TYPE GLOWS ──────────────── */
+.gym-slot.locked[data-type="fire"]:hover .gym-type-badge.fire {
+  box-shadow: 0 0 12px rgba(255, 69, 0, 0.5);
+}
+.gym-slot.locked[data-type="electric"]:hover .gym-type-badge.electric {
+  box-shadow: 0 0 12px rgba(255, 204, 0, 0.5);
+}
+.gym-slot.locked[data-type="grass"]:hover .gym-type-badge.grass {
+  box-shadow: 0 0 12px rgba(76, 175, 80, 0.5);
+}
+.gym-slot.locked[data-type="psychic"]:hover .gym-type-badge.psychic {
+  box-shadow: 0 0 12px rgba(171, 71, 188, 0.5);
+}
+.gym-slot.locked[data-type="dark"]:hover .gym-type-badge.dark {
+  box-shadow: 0 0 12px rgba(97, 97, 97, 0.5);
+}
+.gym-slot.locked[data-type="steel"]:hover .gym-type-badge.steel {
+  box-shadow: 0 0 12px rgba(120, 144, 156, 0.5);
+}
+.gym-slot.locked[data-type="dragon"]:hover .gym-type-badge.dragon {
+  box-shadow: 0 0 12px rgba(126, 87, 194, 0.5);
+}
+
+/* ─── SPRITE CARD ENTRANCE ─────────────── */
+.sprite-card {
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.sprite-card.visible {
+  opacity: 1;
+  --card-enter-y: 0px;
+}
+
+/* ─── ABILITY CARD ENTRANCE ──────────────── */
+.ability-card {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.3s ease, transform 0.3s ease, border-color 0.15s steps(4,end);
+}
+.ability-card.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ─── TEASE GYM FLOAT ────────────────────── */
+.tease-gym {
+  animation: sprite-idle 2s steps(2, end) infinite;
+}
+.tease-gym:nth-child(2) { animation-delay: 0.2s; }
+.tease-gym:nth-child(3) { animation-delay: 0.4s; }
+.tease-gym:nth-child(4) { animation-delay: 0.6s; }
+.tease-gym:nth-child(5) { animation-delay: 0.8s; }
+.tease-gym:nth-child(6) { animation-delay: 1.0s; }
+.tease-gym:nth-child(7) { animation-delay: 1.2s; }
+
+/* ─── NAV SCROLL SHADOW ──────────────────── */
+.pixel-nav.scrolled {
+  box-shadow: 0 4px 0 rgba(0,229,255,0.15);
+}
+
+/* ─── PIXEL BUTTON PRESS FLASH ───────────── */
+.pixel-btn:active::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.15);
+}
+
+/* ─── HERO CONTENT FADE IN ───────────────── */
+.hero-content > * {
+  animation: hero-enter 0.6s ease both;
+}
+.hero-content > *:nth-child(1) { animation-delay: 0.1s; }
+.hero-content > *:nth-child(2) { animation-delay: 0.2s; }
+.hero-content > *:nth-child(3) { animation-delay: 0.35s; }
+.hero-content > *:nth-child(4) { animation-delay: 0.5s; }
+.hero-content > *:nth-child(5) { animation-delay: 0.65s; }
+
+@keyframes hero-enter {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes marina-intro-enter {
+  from {
+    opacity: 0;
+    transform: translateX(24%) scale(0.78);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1.06);
+  }
+}
+
+@keyframes marina-dialogue-rise {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* ─── STAT FILL TRANSITION ───────────────── */
+.stat-fill {
+  transition: width 1s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* ─── MARINA SLUGLINE ANIMATIONS ─────────── */
+@keyframes slugline-float {
+  0%, 100% {
+    transform: rotate(8deg) translateY(0);
+  }
+  50% {
+    transform: rotate(8deg) translateY(-10px);
+  }
+}
+
+@keyframes text-flash {
+  0%, 100% {
+    color: var(--badge-gold);
+    text-shadow: 3px 3px 0 #7a6100, 5px 5px 0 rgba(0,0,0,0.45);
+  }
+  50% {
+    color: #ffe78a;
+    text-shadow: 3px 3px 0 #8a6d00, 5px 5px 0 rgba(0,0,0,0.45), 0 0 6px rgba(255, 231, 138, 0.25);
+  }
+}

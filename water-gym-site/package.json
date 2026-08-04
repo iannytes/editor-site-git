@@ -1,0 +1,66 @@
+{
+  "name": "sprites-gym-site",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Sprites Gym static site and local setup orchestrator prototype.",
+  "main": "installer/main.cjs",
+  "scripts": {
+    "setup": "node scripts/water-gym-setup.mjs",
+    "setup:dry-run": "node scripts/water-gym-setup.mjs --dry-run",
+    "setup:apply": "node scripts/water-gym-setup.mjs --apply",
+    "check": "node scripts/water-gym-setup.mjs --dry-run --json && node scripts/command-center-smoke.mjs",
+    "installer:dev": "electron .",
+    "installer:pack": "electron-builder --win nsis --x64",
+    "installer:dir": "electron-builder --win dir --x64",
+    "installer:dir:nosign": "electron-builder --win dir --x64 --config.win.signAndEditExecutable=false --config.npmRebuild=false",
+    "installer:pack:nosign": "electron-builder --win nsis --x64 --config.win.signAndEditExecutable=false --config.npmRebuild=false",
+    "check:comms": "node scripts/command-center-smoke.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "electron": "^39.2.6",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.spritesgym.installer",
+    "productName": "Sprites Gym",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "installer/**/*",
+      "scripts/**/*",
+      "css/**/*",
+      "js/**/*",
+      "images/**/*",
+      "docs/**/*",
+      "index.html",
+      "README.md",
+      "SOFTWARE_ROLLOUT.md",
+      "WATER_GYM_FOUNDATION.md",
+      "water-gym.manifest.json",
+      "package.json"
+    ],
+    "asar": false,
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "signAndEditExecutable": false,
+      "icon": "installer/assets/sprites-gym.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Sprites Gym",
+      "installerIcon": "installer/assets/sprites-gym.ico",
+      "uninstallerIcon": "installer/assets/sprites-gym.ico"
+    },
+    "npmRebuild": false
+  }
+}

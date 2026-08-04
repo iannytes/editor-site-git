@@ -1,0 +1,25 @@
+{
+  "schema": "sprites-gym.theme.v0",
+  "id": "base-command-center",
+  "name": "The Command Center Base",
+  "description": "Neutral monster-gym operating console foundation. Not tied to any single Gym type.",
+  "tokens": {
+    "surface": "#0a1628",
+    "surfaceRaised": "#081a2e",
+    "surfaceDeep": "#04101e",
+    "border": "#1a4a6b",
+    "accent": "#ffd700",
+    "accentAlt": "#00e5ff",
+    "text": "#e0f7ff",
+    "textMuted": "#7aa8c4",
+    "success": "#9dff9d",
+    "danger": "#ff6b86"
+  },
+  "ui": {
+    "language": {
+      "taskName": "Quest",
+      "agentName": "Sprite",
+      "workspaceName": "Gym"
+    }
+  }
+}

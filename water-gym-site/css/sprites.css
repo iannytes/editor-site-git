@@ -1,0 +1,463 @@
+/* ═══════════════════════════════════════════
+   THE GYM ECOSYSTEM — sprites.css
+   CSS box-shadow pixel art sprites
+   Unit: 1u = 6px. Sprites are 16×24u or 16×16u
+   box-shadow: Xu Yu COLOR  (no blur/spread)
+═══════════════════════════════════════════ */
+
+/* ─── SPRITE BASE ────────────────────────── */
+.sprite {
+  position: relative;
+  display: inline-block;
+  image-rendering: pixelated;
+  /* Reference pixel — invisible, offset from flow */
+  width: 6px;
+  height: 6px;
+  background: transparent;
+  /* Each box-shadow entry = one 6×6 pixel */
+  /* Format: X Y COLOR  (no blur, no spread) */
+}
+
+/* Bounce animation on hover for card sprites */
+.card-sprite {
+  animation: sprite-idle 1.6s steps(2, end) infinite;
+}
+.sprite-card:hover .card-sprite {
+  animation: sprite-bounce 0.9s steps(2, end) infinite;
+}
+
+/* ═══════════════════════════════════════
+   MARINA — Gym Leader
+   Humanoid trainer, 12×20 pixels
+   Colors: teal (#00bcd4), white (#e0f7ff),
+           dark (#1a1a2a), skin (#f0c8a0),
+           hair (#1a6fa8)
+═══════════════════════════════════════ */
+.sprite.marina {
+  /* Row 0 (hair top) */
+  box-shadow:
+    /* Hair */
+    18px 0     #1a6fa8,
+    24px 0     #1a6fa8,
+    30px 0     #1a6fa8,
+    36px 0     #1a6fa8,
+    42px 0     #1a6fa8,
+
+    /* Row 1 (face) */
+    12px 6px   #1a6fa8,
+    18px 6px   #f0c8a0,
+    24px 6px   #f0c8a0,
+    30px 6px   #f0c8a0,
+    36px 6px   #f0c8a0,
+    42px 6px   #f0c8a0,
+    48px 6px   #1a6fa8,
+
+    /* Row 2 (eyes) */
+    12px 12px  #1a6fa8,
+    18px 12px  #1a2a3a,
+    24px 12px  #f0c8a0,
+    30px 12px  #00e5ff,
+    36px 12px  #f0c8a0,
+    42px 12px  #1a2a3a,
+    48px 12px  #1a6fa8,
+
+    /* Row 3 (nose/mouth) */
+    12px 18px  #1a6fa8,
+    18px 18px  #f0c8a0,
+    24px 18px  #f0c8a0,
+    30px 18px  #d4956a,
+    36px 18px  #f0c8a0,
+    42px 18px  #f0c8a0,
+    48px 18px  #1a6fa8,
+
+    /* Row 4 (neck/collar) */
+    18px 24px  #f0c8a0,
+    24px 24px  #f0c8a0,
+    30px 24px  #f0c8a0,
+    36px 24px  #f0c8a0,
+    42px 24px  #f0c8a0,
+
+    /* Row 5 (shoulders) */
+    12px 30px  #00bcd4,
+    18px 30px  #00bcd4,
+    24px 30px  #00bcd4,
+    30px 30px  #e0f7ff,
+    36px 30px  #00bcd4,
+    42px 30px  #00bcd4,
+    48px 30px  #00bcd4,
+
+    /* Row 6 (torso) */
+    12px 36px  #00bcd4,
+    18px 36px  #0097a7,
+    24px 36px  #00bcd4,
+    30px 36px  #00bcd4,
+    36px 36px  #00bcd4,
+    42px 36px  #0097a7,
+    48px 36px  #00bcd4,
+
+    /* Row 7 (torso lower) */
+    12px 42px  #00bcd4,
+    18px 42px  #00bcd4,
+    24px 42px  #00bcd4,
+    30px 42px  #00bcd4,
+    36px 42px  #00bcd4,
+    42px 42px  #00bcd4,
+    48px 42px  #00bcd4,
+
+    /* Row 8 (belt) */
+    12px 48px  #1a6fa8,
+    18px 48px  #1a6fa8,
+    24px 48px  #ffd700,
+    30px 48px  #ffd700,
+    36px 48px  #ffd700,
+    42px 48px  #1a6fa8,
+    48px 48px  #1a6fa8,
+
+    /* Row 9 (legs) */
+    18px 54px  #1a4a6b,
+    24px 54px  #1a4a6b,
+    36px 54px  #1a4a6b,
+    42px 54px  #1a4a6b,
+
+    /* Row 10 (feet) */
+    18px 60px  #1a2a3a,
+    24px 60px  #1a2a3a,
+    36px 60px  #1a2a3a,
+    42px 60px  #1a2a3a;
+}
+
+/* ═══════════════════════════════════════
+   RIPPLE — Trend Monitor
+   Water droplet with eyes, 10×14 pixels
+   Colors: light blue (#b2ebf2), aqua (#00e5ff),
+           dark eyes (#1a2a3a), white (#ffffff)
+═══════════════════════════════════════ */
+.sprite.ripple {
+  box-shadow:
+    /* Row 0 */
+    18px 0     #4fc3f7,
+    24px 0     #4fc3f7,
+
+    /* Row 1 */
+    12px 6px   #b2ebf2,
+    18px 6px   #00e5ff,
+    24px 6px   #00e5ff,
+    30px 6px   #b2ebf2,
+
+    /* Row 2 (eyes) */
+    12px 12px  #00bcd4,
+    18px 12px  #1a2a3a,
+    24px 12px  #00e5ff,
+    30px 12px  #1a2a3a,
+    36px 12px  #00bcd4,
+
+    /* Row 3 */
+    12px 18px  #00bcd4,
+    18px 18px  #b2ebf2,
+    24px 18px  #b2ebf2,
+    30px 18px  #b2ebf2,
+    36px 18px  #00bcd4,
+
+    /* Row 4 */
+    12px 24px  #00bcd4,
+    18px 24px  #00bcd4,
+    24px 24px  #00bcd4,
+    30px 24px  #00bcd4,
+    36px 24px  #00bcd4,
+
+    /* Row 5 */
+    18px 30px  #00bcd4,
+    24px 30px  #00bcd4,
+    30px 30px  #00bcd4,
+
+    /* Row 6 (point of drop) */
+    24px 36px  #4fc3f7,
+
+    /* Ripple rings */
+    6px  48px  #00e5ff,
+    18px 48px  #00e5ff,
+    30px 48px  #00e5ff,
+    42px 48px  #00e5ff;
+}
+
+/* ═══════════════════════════════════════
+   TIDEBYTE — SEO Optimizer
+   Crab with antennae, 14×12 pixels
+   Colors: dark blue (#1565c0), gold (#ffd700),
+           claw (#0d47a1), eye (#00e5ff)
+═══════════════════════════════════════ */
+.sprite.tidebyte {
+  box-shadow:
+    /* Antennae */
+    18px 0     #1565c0,
+    36px 0     #1565c0,
+    12px 6px   #1565c0,
+    18px 6px   #ffd700,
+    36px 6px   #ffd700,
+    42px 6px   #1565c0,
+
+    /* Row 2 (shell top) */
+    12px 12px  #1565c0,
+    18px 12px  #1e88e5,
+    24px 12px  #1e88e5,
+    30px 12px  #1e88e5,
+    36px 12px  #1e88e5,
+    42px 12px  #1565c0,
+
+    /* Row 3 (eyes) */
+    6px  18px  #0d47a1,
+    12px 18px  #00e5ff,
+    18px 18px  #1e88e5,
+    24px 18px  #ffd700,
+    30px 18px  #1e88e5,
+    36px 18px  #00e5ff,
+    42px 18px  #0d47a1,
+    48px 18px  #0d47a1,
+
+    /* Row 4 (body) */
+    6px  24px  #0d47a1,
+    12px 24px  #1565c0,
+    18px 24px  #1e88e5,
+    24px 24px  #1e88e5,
+    30px 24px  #1e88e5,
+    36px 24px  #1e88e5,
+    42px 24px  #1565c0,
+    48px 24px  #0d47a1,
+
+    /* Row 5 (legs) */
+    6px  30px  #0d47a1,
+    18px 30px  #0d47a1,
+    30px 30px  #0d47a1,
+    42px 30px  #0d47a1,
+    48px 30px  #0d47a1,
+
+    /* Claws */
+    0px  18px  #0d47a1,
+    0px  24px  #0d47a1,
+    54px 18px  #0d47a1,
+    54px 24px  #0d47a1;
+}
+
+/* ═══════════════════════════════════════
+  SQUINK — Writer (squid-ink hybrid)
+   Round head + tentacles, 12×16 pixels
+   Colors: deep purple (#4a148c), blue-purple (#7c4dff),
+           ink (#1a0033), eye (#e040fb)
+═══════════════════════════════════════ */
+.sprite.squink {
+  box-shadow:
+    /* Head */
+    18px 0     #7c4dff,
+    24px 0     #7c4dff,
+    30px 0     #7c4dff,
+
+    12px 6px   #7c4dff,
+    18px 6px   #9c6fff,
+    24px 6px   #9c6fff,
+    30px 6px   #9c6fff,
+    36px 6px   #7c4dff,
+
+    /* Eyes */
+    12px 12px  #7c4dff,
+    18px 12px  #e040fb,
+    24px 12px  #9c6fff,
+    30px 12px  #e040fb,
+    36px 12px  #7c4dff,
+
+    /* Mouth */
+    12px 18px  #7c4dff,
+    18px 18px  #9c6fff,
+    24px 18px  #4a148c,
+    30px 18px  #9c6fff,
+    36px 18px  #7c4dff,
+
+    /* Body */
+    12px 24px  #7c4dff,
+    18px 24px  #7c4dff,
+    24px 24px  #7c4dff,
+    30px 24px  #7c4dff,
+    36px 24px  #7c4dff,
+
+    /* Tentacles */
+    6px  30px  #4a148c,
+    18px 30px  #4a148c,
+    24px 30px  #4a148c,
+    30px 30px  #4a148c,
+    42px 30px  #4a148c,
+
+    6px  36px  #4a148c,
+    18px 36px  #4a148c,
+    30px 36px  #4a148c,
+    42px 36px  #4a148c,
+
+    12px 42px  #4a148c,
+    24px 42px  #4a148c,
+    36px 42px  #4a148c,
+
+    /* Ink drop */
+    30px 48px  #1a0033,
+    36px 48px  #1a0033;
+}
+
+/* ═══════════════════════════════════════
+   WAVEFORM — Content Repurposer
+   Wave serpent, 16×10 pixels
+   Colors: cyan (#00e5ff), teal (#00bcd4),
+           dark (#003344)
+═══════════════════════════════════════ */
+.sprite.waveform {
+  box-shadow:
+    /* Head */
+    0px   12px  #00e5ff,
+    6px   6px   #00e5ff,
+    6px   12px  #00bcd4,
+    12px  0px   #00e5ff,
+    12px  6px   #00e5ff,
+    18px  0px   #00bcd4,
+    18px  6px   #00bcd4,
+
+    /* Eye */
+    6px   6px   #1a2a3a,
+
+    /* Body wave */
+    24px  6px   #00bcd4,
+    30px  6px   #00e5ff,
+    30px  12px  #00bcd4,
+    36px  12px  #00e5ff,
+    36px  18px  #00bcd4,
+    42px  18px  #00e5ff,
+    42px  24px  #00bcd4,
+    48px  24px  #00e5ff,
+    48px  18px  #00bcd4,
+    54px  18px  #00e5ff,
+    54px  12px  #00bcd4,
+    60px  12px  #00e5ff,
+    60px  6px   #00bcd4,
+    66px  6px   #00e5ff,
+    72px  6px   #00bcd4,
+
+    /* Tail fin */
+    72px  0px   #003344,
+    78px  0px   #003344,
+    78px  6px   #003344,
+    78px  12px  #003344;
+}
+
+/* ═══════════════════════════════════════
+   TORRENTAIL — Analytics (eel)
+   Long eel with fins, 16×8 pixels
+   Colors: electric blue (#00b0ff), dark (#001a33),
+           fin (#4dd0e1), data (#ffd700)
+═══════════════════════════════════════ */
+.sprite.torrentail {
+  box-shadow:
+    /* Head */
+    0px   12px  #00b0ff,
+    6px   6px   #00b0ff,
+    6px   12px  #00b0ff,
+    12px  6px   #00b0ff,
+    12px  12px  #4dd0e1,
+
+    /* Eye */
+    6px   6px   #001a33,
+
+    /* Body */
+    18px  6px   #00b0ff,
+    24px  6px   #4dd0e1,
+    30px  6px   #00b0ff,
+    36px  6px   #4dd0e1,
+    42px  6px   #00b0ff,
+    48px  6px   #4dd0e1,
+    54px  6px   #00b0ff,
+    60px  6px   #4dd0e1,
+
+    /* Data fins (top) */
+    18px  0px   #ffd700,
+    30px  0px   #ffd700,
+    42px  0px   #ffd700,
+    54px  0px   #ffd700,
+
+    /* Tail */
+    66px  6px   #001a33,
+    72px  6px   #001a33,
+    72px  0px   #001a33,
+    72px  12px  #001a33;
+}
+
+/* ═══════════════════════════════════════
+   CASCADEX — Scheduler (jellyfish + clock)
+   Bell top, trailing tendrils, 12×16 pixels
+   Colors: violet (#b39ddb), pale (#e8d5ff),
+           clock (#ffd700), dark (#1a0a33)
+═══════════════════════════════════════ */
+.sprite.cascadex {
+  box-shadow:
+    /* Bell top */
+    18px 0     #b39ddb,
+    24px 0     #b39ddb,
+    30px 0     #b39ddb,
+
+    12px 6px   #b39ddb,
+    18px 6px   #e8d5ff,
+    24px 6px   #e8d5ff,
+    30px 6px   #e8d5ff,
+    36px 6px   #b39ddb,
+
+    /* Clock face */
+    12px 12px  #b39ddb,
+    18px 12px  #ffd700,
+    24px 12px  #ffd700,
+    30px 12px  #ffd700,
+    36px 12px  #b39ddb,
+
+    /* Clock hands */
+    12px 18px  #9575cd,
+    18px 18px  #1a0a33,
+    24px 18px  #ffd700,
+    30px 18px  #ffd700,
+    36px 18px  #9575cd,
+
+    /* Body base */
+    18px 24px  #9575cd,
+    24px 24px  #b39ddb,
+    30px 24px  #9575cd,
+
+    /* Tentacles */
+    12px 30px  #7e57c2,
+    18px 30px  #7e57c2,
+    30px 30px  #7e57c2,
+    36px 30px  #7e57c2,
+
+    12px 36px  #673ab7,
+    24px 36px  #673ab7,
+    36px 36px  #673ab7,
+
+    18px 42px  #673ab7,
+    30px 42px  #673ab7,
+
+    18px 48px  #4a148c,
+    30px 48px  #4a148c;
+}
+
+/* ─── GYM MAP SPRITE SIZE ────────────────── */
+.gym-map-sprite {
+  transform: scale(0.7);
+  transform-origin: top left;
+  margin-bottom: -10px;
+}
+
+/* ─── HERO MARINA (larger) ───────────────── */
+.marina-hero .sprite.marina {
+  transform: scale(2.2);
+  transform-origin: top left;
+  margin-bottom: 80px;
+  margin-right: 60px;
+}
+
+/* ─── FINAL CTA MARINA ───────────────────── */
+.sprite.marina.final-marina {
+  transform: scale(3);
+  transform-origin: top left;
+  margin-bottom: 120px;
+  margin-right: 90px;
+}
